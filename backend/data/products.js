@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: '1',
     name: 'Boba Fett',
     image: '/images/bobafett.jpg',
     description:
@@ -13,7 +12,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '2',
     name: 'Cad Bane',
     image: '/images/cadbane.jpg',
     description:
@@ -26,7 +24,6 @@ const products = [
     numReviews: 8,
   },
   {
-    _id: '3',
     name: 'Darth Vader (The Empire Strikes Back)',
     image: '/images/darthvader_theempirestrikesback.jpg',
     description:
@@ -39,7 +36,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '4',
     name: 'Han Solo (Endor)',
     image: '/images/hansolo_endor.jpg',
     description:
@@ -52,7 +48,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '5',
     name: 'Imperial Probe Droid',
     image: '/images/imperialprobedroid.jpg',
     description:
@@ -65,7 +60,6 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: '6',
     name: 'The Child',
     image: '/images/thechild.jpg',
     description:
