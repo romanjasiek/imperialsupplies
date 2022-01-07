@@ -41,7 +41,7 @@ const ProductScreen = () => {
   return (
     <>
       <Link className='btn btn-dark my-3' to='/'>
-        Go back
+        <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go back
       </Link>
       {loading ? (
         <Loader />
@@ -58,16 +58,27 @@ const ProductScreen = () => {
                 <h3>{product.name}</h3>
               </ListGroup.Item>
               <ListGroup.Item>
+                <strong className='categoryColor'>Brand:</strong>{' '}
+                {product.brand}
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <strong className='categoryColor'>Category:</strong>{' '}
+                {product.category}
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <strong className='categoryColor'>Price:</strong>{' '}
+                {product.price} €
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <strong className='categoryColor'>Description:</strong>{' '}
+                {product.description}
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <strong className='categoryColor'>Rating:</strong>{' '}
                 <Rating
                   value={product.rating}
                   text={`${product.numReviews} reviews`}
                 />
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <strong>Price</strong>: {product.price} €
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <strong>Description</strong>: {product.description}
               </ListGroup.Item>
             </ListGroup>
           </Col>
@@ -115,7 +126,7 @@ const ProductScreen = () => {
                     type='button'
                     disabled={product.countInStock === 0}
                   >
-                    Add to cart
+                    <i className='fas fa-cart-arrow-down'></i> Add to cart
                   </Button>
                 </ListGroup.Item>
               </ListGroup>

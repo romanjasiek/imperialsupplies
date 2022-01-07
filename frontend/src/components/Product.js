@@ -10,11 +10,16 @@ const Product = ({ product }) => {
         <Card.Img src={product.image} variant='top' />
       </Link>
       <Card.Body>
-        <Link className="link-danger" to={`/product/${product._id}`}>
+        <Link className='link-danger' to={`/product/${product._id}`}>
           <Card.Title as='div'>
-            <strong>{product.name}</strong>
+            <h5>
+              <strong>{product.name}</strong>
+            </h5>
           </Card.Title>
         </Link>
+        <Card.Text as='p' className='smalldescription'>
+          {product.brand} | {product.category}
+        </Card.Text>
         <Card.Text as='div'>
           <Rating
             value={product.rating}

@@ -1,11 +1,47 @@
+@font-face {
+  font-family: 'DeathStar';
+  src: local('DeathStar'), url(./font/DeathStar-VmWB.ttf) format('truetype');
+
+}
+
 main {
     min-height: 80vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 h3 {
     padding: 1rem 0;
 }
 
+img {
+    box-shadow: 0.2rem 0.2rem 0.1rem 0.1rem rgba(255, 0, 0, .7);;
+}
+
+
+.title {
+    font-family: 'DeathStar';
+    font-size: 4.5rem;
+    padding: 0;
+    margin: 0;
+    text-shadow: 2px 2px #000000;
+
+}
+
 .rating span {
     margin: 0.1rem;
+}
+
+.categoryColor {
+    color: #FF0000;
+}
+
+.smalldescription {
+    margin-top: 0;
+    font-weight: 100;
+    font-size: 0.8rem;
 }
