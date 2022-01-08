@@ -18,11 +18,6 @@ h3 {
     padding: 1rem 0;
 }
 
-img {
-    box-shadow: 0.2rem 0.2rem 0.1rem 0.1rem rgba(255, 0, 0, .7);;
-}
-
-
 .title {
     font-family: 'DeathStar';
     font-size: 4.5rem;
