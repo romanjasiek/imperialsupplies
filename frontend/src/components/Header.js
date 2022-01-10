@@ -33,7 +33,7 @@ const Header = () => {
               </LinkContainer>
               {userInfo ? (
                 <NavDropdown title={`Welcome, ${userInfo.name}`} id='username'>
-                  <LinkContainer to='/user'>
+                  <LinkContainer to='/profile'>
                     <NavDropdown.Item>
                       <i className='fas fa-user-circle categoryColor'></i>{' '}
                       Profile
