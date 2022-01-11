@@ -67,7 +67,7 @@ class BB8 extends React.Component {
   }
 
   // Get some initial movement on first mount.
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.setState({
       mouseX: 300,
     });
@@ -98,7 +98,7 @@ class BB8 extends React.Component {
         React.createElement(
           'div',
           { className: 'control-wrap' },
-          React.createElement('p', null, 'Speed: ', speed),
+          React.createElement('p', null, 'Droid Speed: ', speed),
           React.createElement('input', {
               className: 'slider',
             type: 'range',
@@ -116,7 +116,7 @@ class BB8 extends React.Component {
           React.createElement(
             'p',
             null,
-            'Acceleration: ',
+            'Droid Acceleration: ',
             accelMod
           ),
           React.createElement('input', {

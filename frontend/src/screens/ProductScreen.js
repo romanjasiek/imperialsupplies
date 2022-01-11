@@ -67,7 +67,7 @@ const ProductScreen = () => {
               </ListGroup.Item>
               <ListGroup.Item>
                 <strong className='categoryColor'>Price:</strong>{' '}
-                {product.price} €
+                <span className='price-color'>{product.price} €</span>
               </ListGroup.Item>
               <ListGroup.Item>
                 <strong className='categoryColor'>Description:</strong>{' '}

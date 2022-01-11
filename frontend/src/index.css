@@ -3,7 +3,10 @@
 @font-face {
   font-family: 'DeathStar';
   src: local('DeathStar'), url(./font/DeathStar-VmWB.ttf) format('truetype');
-
+  font-family: 'Moonhouse';
+  src: local('Moonhouse'), url(./font/Moonhouse-yE5M.ttf) format('truetype');
+  font-family: 'Mandalore';
+  src: local('Mandalore'), url(./font/Mandalore-K77lD.otf) format('opentype');
 }
 
 main {
@@ -11,6 +14,8 @@ main {
 }
 
 h1 {
+    font-family: 'Moonhouse';
+    text-transform: uppercase;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -19,6 +24,10 @@ h1 {
 h3 {
     padding: 1rem 0;
 }
+
+/* a {
+  font-family: 'Mandalore';
+} */
 
 .navbar {
     border-top: 1px solid rgb(88, 0, 0);
@@ -36,6 +45,10 @@ h3 {
 
 .rating span {
     margin: 0.1rem;
+}
+
+.price-color {
+  color: skyblue;
 }
 
 .categoryColor {

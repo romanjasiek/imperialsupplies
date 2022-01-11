@@ -45,9 +45,7 @@ const CartScreen = () => {
   return (
     <Row>
       <Col md={8}>
-        <h1>
-          Shopping Cart
-        </h1>
+        <h1>Shopping Cart</h1>
         {cartItems.length === 0 ? (
           <Message>
             Your cart is empty. <Link to='/'>Go Back</Link>
@@ -68,7 +66,9 @@ const CartScreen = () => {
                       {item.name}
                     </Link>
                   </Col>
-                  <Col md={2}>${item.price}</Col>
+                  <Col md={2}>
+                    <span className='price-color'>{item.price} €</span>
+                  </Col>
                   <Col md={2}>
                     <Form.Control
                       as='select'
@@ -97,6 +97,7 @@ const CartScreen = () => {
                   </Col>
                 </Row>
               </ListGroup.Item>
+              
             ))}
           </ListGroup>
         )}
