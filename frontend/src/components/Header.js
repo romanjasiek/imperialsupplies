@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { logout } from '../actions/userActions';
+import Binoculars from '../components/Binoculars';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -16,7 +17,8 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
+      <Binoculars />
+      <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect className='navbar'>
         <Container>
           <LinkContainer to='/'>
             <Navbar.Brand className='title'>
@@ -41,10 +43,9 @@ const Header = () => {
                   </LinkContainer>
                   <NavDropdown.Divider />
                   {/* <LinkContainer to='/logout'> */}
-                    <NavDropdown.Item onClick={logoutHandler}>
-                      <i className='fas fa-sign-out-alt categoryColor'></i>{' '}
-                      Logout
-                    </NavDropdown.Item>
+                  <NavDropdown.Item onClick={logoutHandler}>
+                    <i className='fas fa-sign-out-alt categoryColor'></i> Logout
+                  </NavDropdown.Item>
                 </NavDropdown>
               ) : (
                 <LinkContainer to='/login'>
