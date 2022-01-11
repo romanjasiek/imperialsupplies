@@ -10,12 +10,21 @@ import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import ShippingScreen from './screens/ShippingScreen';
+import PaymentScreen from './screens/PaymentScreen';
+import Sound from 'react-sound';
+import BackgroundHum from './sound/tng_hum_clean.mp3';
 
 const App = () => {
   return (
     <Router>
       <Fragment>
         <Header />
+        {/* <Sound
+          url={BackgroundHum}
+          autoLoad={true}
+          loop={true}
+          playStatus={Sound.status.PLAYING}
+        /> */}
         <main className='py-3'>
           <Container>
             <Routes>
@@ -27,6 +36,7 @@ const App = () => {
               <Route path='/cart/' element={<CartScreen />} />
               <Route path='/cart/:id' element={<CartScreen />} />
               <Route path='/shipping' element={<ShippingScreen />} />
+              <Route path='/payment' element={<PaymentScreen />} />
             </Routes>
           </Container>
         </main>

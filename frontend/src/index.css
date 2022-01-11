@@ -21,8 +21,8 @@ h3 {
 }
 
 .navbar {
-    border-top: 1px solid darkred;
-    box-shadow: 0 4px 2 px -2px darkred;
+    border-top: 1px solid rgb(88, 0, 0);
+    box-shadow: 0 4px 2px -2px darkred;
 }
     
 .title {
