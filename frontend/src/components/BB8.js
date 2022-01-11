@@ -13,7 +13,7 @@ class BB8 extends React.Component {
     };
   }
 
-  // Keep track of the mouse position.
+  // Keep track of the mouse position
   handleMouseMove(event) {
     this.setState({
       mouseX: event.pageX,
@@ -38,7 +38,7 @@ class BB8 extends React.Component {
     }
   }
 
-  // Get moving!
+  // Move litte droid, moooove!
   movement() {
     let { droidX, mouseX, speed, accelMod } = this.state;
 
@@ -79,32 +79,26 @@ class BB8 extends React.Component {
     setInterval(this.movement.bind(this), 1);
   }
 
-  // Clean up.
+  // Clean up
   componentWillUnmount() {
     document.removeEventListener('mousemove', (e) => this.handleMouseMove(e));
   }
 
-  // Away we go.
+  // Away we go
   render() {
     let { speed, accelMod, droidX, mouseX, toTheRight } = this.state;
 
-    return /*#__PURE__*/ React.createElement(
+    return React.createElement(
       'div',
-      null /*#__PURE__*/,
-
-      //   React.createElement(
-      //     'div',
-      //     { className: 'logo' } /*#__PURE__*/,
-      //     React.createElement('img', { src: 'http://i68.tinypic.com/iod6yh.png' })
-      //   ) /*#__PURE__*/,
+      null,
 
       React.createElement(
         'div',
-        { className: 'config' } /*#__PURE__*/,
+        { className: 'config' },
         React.createElement(
           'div',
-          { className: 'control-wrap' } /*#__PURE__*/,
-          React.createElement('p', null, 'Speed: ', speed) /*#__PURE__*/,
+          { className: 'control-wrap' },
+          React.createElement('p', null, 'Speed: ', speed),
           React.createElement('input', {
               className: 'slider',
             type: 'range',
@@ -114,17 +108,17 @@ class BB8 extends React.Component {
             value: speed,
             onChange: this.handleSpeedChange.bind(this),
           })
-        ) /*#__PURE__*/,
+        ),
 
         React.createElement(
           'div',
-          { className: 'control-wrap' } /*#__PURE__*/,
+          { className: 'control-wrap' },
           React.createElement(
             'p',
             null,
             'Acceleration: ',
             accelMod
-          ) /*#__PURE__*/,
+          ),
           React.createElement('input', {
               className: 'slider',
             type: 'range',
@@ -135,14 +129,14 @@ class BB8 extends React.Component {
             onChange: this.handleAccelChange.bind(this),
           })
         )
-      ) /*#__PURE__*/,
+      ),
 
       React.createElement(
         'div',
         {
           className: 'bb8',
           style: { WebkitTransform: `translateX(${droidX}px)` },
-        } /*#__PURE__*/,
+        },
         React.createElement(
           'div',
           {
@@ -152,12 +146,12 @@ class BB8 extends React.Component {
                 (mouseX - droidX) / 25
               }px) rotateZ(${(mouseX - droidX) / 80}deg)`,
             },
-          } /*#__PURE__*/,
+          },
           React.createElement('div', {
             className: 'antenna short',
-          }) /*#__PURE__*/,
+          }),
           React.createElement('div', { className: 'antenna long' })
-        ) /*#__PURE__*/,
+        ),
 
         React.createElement(
           'div',
@@ -168,67 +162,67 @@ class BB8 extends React.Component {
                 (mouseX - droidX) / 15
               }px) rotateZ(${(mouseX - droidX) / 25}deg)`,
             },
-          } /*#__PURE__*/,
-          React.createElement('div', { className: 'stripe one' }) /*#__PURE__*/,
-          React.createElement('div', { className: 'stripe two' }) /*#__PURE__*/,
+          },
+          React.createElement('div', { className: 'stripe one' }),
+          React.createElement('div', { className: 'stripe two' }),
           React.createElement(
             'div',
-            { className: 'eyes ' + (toTheRight ? 'right' : '') } /*#__PURE__*/,
-            React.createElement('div', { className: 'eye one' }) /*#__PURE__*/,
+            { className: 'eyes ' + (toTheRight ? 'right' : '') },
+            React.createElement('div', { className: 'eye one' }),
             React.createElement('div', { className: 'eye two' })
-          ) /*#__PURE__*/,
+          ),
 
           React.createElement(
             'div',
             {
               className: 'stripe detail ' + (toTheRight ? 'right' : ''),
-            } /*#__PURE__*/,
+            },
             React.createElement('div', {
               className: 'detail zero',
-            }) /*#__PURE__*/,
+            }),
             React.createElement('div', {
               className: 'detail zero',
-            }) /*#__PURE__*/,
+            }),
             React.createElement('div', {
               className: 'detail one',
-            }) /*#__PURE__*/,
+            }),
             React.createElement('div', {
               className: 'detail two',
-            }) /*#__PURE__*/,
+            }),
             React.createElement('div', {
               className: 'detail three',
-            }) /*#__PURE__*/,
+            }),
             React.createElement('div', {
               className: 'detail four',
-            }) /*#__PURE__*/,
+            }),
             React.createElement('div', {
               className: 'detail five',
-            }) /*#__PURE__*/,
+            }),
             React.createElement('div', { className: 'detail five' })
-          ) /*#__PURE__*/,
+          ),
 
           React.createElement('div', { className: 'stripe three' })
-        ) /*#__PURE__*/,
+        ),
 
         React.createElement(
           'div',
           {
             className: 'ball',
             style: { WebkitTransform: `rotateZ(${droidX / 2}deg)` },
-          } /*#__PURE__*/,
-          React.createElement('div', { className: 'lines one' }) /*#__PURE__*/,
-          React.createElement('div', { className: 'lines two' }) /*#__PURE__*/,
-          React.createElement('div', { className: 'ring one' }) /*#__PURE__*/,
-          React.createElement('div', { className: 'ring two' }) /*#__PURE__*/,
+          },
+          React.createElement('div', { className: 'lines one' }),
+          React.createElement('div', { className: 'lines two' }),
+          React.createElement('div', { className: 'ring one' }),
+          React.createElement('div', { className: 'ring two' }),
           React.createElement('div', { className: 'ring three' })
-        ) /*#__PURE__*/,
+        ),
 
         React.createElement('div', { className: 'shadow' })
-      ) /*#__PURE__*/,
+      ),
 
       React.createElement(
         'div',
-        { className: 'instructions' } /*#__PURE__*/,
+        { className: 'instructions' },
         React.createElement('p', null, 'Copyright © 2022 Imperial Supplies')
       )
     );
@@ -236,8 +230,3 @@ class BB8 extends React.Component {
 }
 
 export default BB8;
-
-// ReactDOM.render(
-//   /*#__PURE__*/ React.createElement(App, null),
-//   document.getElementById('app')
-// );
