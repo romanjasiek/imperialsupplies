@@ -14,6 +14,8 @@ import Rating from '../components/Rating';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import { listProductDetails } from '../actions/productActions';
+import TieFighter2 from '../sound/c80c41f5-824d-41ea-abea-b9245e5ee8e9.mp3';
+import ThisIsTheWay from '../sound/cac7f9ab-f6a9-44b3-a37c-abe78d1dbd87.mp3';
 
 const ProductScreen = () => {
   const [qty, setQty] = useState(1);
@@ -38,9 +40,20 @@ const ProductScreen = () => {
     navigate(`/cart/${id}?qty=${qty}`);
   };
 
+        let audio = new Audio(TieFighter2);
+        let audio2 = new Audio(ThisIsTheWay);
+
+        const start = () => {
+          audio.play();
+        };
+
+        const thisistheway = () => {
+          audio2.play();
+        };
+
   return (
     <>
-      <Link className='btn btn-dark my-3' to='/'>
+      <Link className='btn btn-dark my-3' onClick={start} to='/'>
         <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go back
       </Link>
       {loading ? (
@@ -55,7 +68,8 @@ const ProductScreen = () => {
           <Col md={3}>
             <ListGroup variant='flush'>
               <ListGroup.Item>
-                <h3>{product.name}</h3>
+                <h3 className='price-color'>{product.name}</h3>
+                <h6 className='price-color galacticbasic__small'>{product.name}</h6>
               </ListGroup.Item>
               <ListGroup.Item>
                 <strong className='categoryColor'>Brand:</strong>{' '}
@@ -66,7 +80,8 @@ const ProductScreen = () => {
                 {product.category}
               </ListGroup.Item>
               <ListGroup.Item>
-                <strong className='categoryColor'>Price:</strong>{' '}
+                <strong className='categoryColor'>Price /</strong>{' '}
+                <strong className='categoryColor galacticbasic'>Price:</strong>{' '}
                 <span className='price-color'>{product.price} €</span>
               </ListGroup.Item>
               <ListGroup.Item>
@@ -74,7 +89,16 @@ const ProductScreen = () => {
                 {product.description}
               </ListGroup.Item>
               <ListGroup.Item>
-                <strong className='categoryColor'>Rating:</strong>{' '}
+                <strong className='categoryColor galacticbasic'>
+                  Description:
+                </strong>{' '}
+                <span className='galacticbasic__light'>
+                  {product.description}
+                </span>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <strong className='categoryColor'>Rating /</strong>{' '}
+                <strong className='categoryColor galacticbasic'>Rating</strong>{' '}
                 <Rating
                   value={product.rating}
                   text={`${product.numReviews} reviews`}
@@ -121,7 +145,10 @@ const ProductScreen = () => {
                 )}
                 <ListGroup.Item className='d-grid gap-2'>
                   <Button
-                    onClick={addToCartHandler}
+                    onClick={() => {
+                      addToCartHandler();
+                      thisistheway();
+                    }}
                     className='btn btn-danger btn-block'
                     type='button'
                     disabled={product.countInStock === 0}

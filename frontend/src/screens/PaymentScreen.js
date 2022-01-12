@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Form, Col, Row, Button } from 'react-bootstrap';
+import { Form, Row, Button } from 'react-bootstrap';
 import FormContainer from '../components/FormContainer';
 import CheckoutSteps from '../components/CheckoutSteps';
 import { useDispatch, useSelector } from 'react-redux';
 import { savePaymentMethod } from '../actions/cartActions';
+import TieFighter from '../sound/d660a0dd-f51a-47e4-9077-6fcc68f17f8b.mp3';
 
 const PaymentScreen = () => {
   const history = useNavigate();
@@ -25,6 +26,12 @@ const [paymentMethod, setPaymentMethod] = useState('PayPal');
 
     history('/placeorder');
   };
+
+      let audio = new Audio(TieFighter);
+
+      const tieFighter = () => {
+        audio.play();
+      };
 
   return (
     <FormContainer>
@@ -58,7 +65,11 @@ const [paymentMethod, setPaymentMethod] = useState('PayPal');
         </Form.Group>
         <Form.Group className='d-grid gap-2'>
           {' '}
-          <Button className='btn btn-danger btn-block my-2' type='submit'>
+          <Button
+            className='btn btn-danger btn-block my-2'
+            type='submit'
+            onClick={tieFighter}
+          >
             Continue
           </Button>
         </Form.Group>

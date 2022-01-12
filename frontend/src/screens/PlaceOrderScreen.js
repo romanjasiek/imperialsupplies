@@ -7,6 +7,8 @@ import CheckoutSteps from '../components/CheckoutSteps';
 import { createOrder } from '../actions/orderActions';
 import { ORDER_CREATE_RESET } from '../constants/orderConstants';
 import { USER_DETAIL_RESET } from '../constants/userConstants';
+import RogerRoger from '../sound/fc72e034-de5c-480c-a9f9-4f6338cbc7b5.mp3';
+import TieFighter2 from '../sound/c80c41f5-824d-41ea-abea-b9245e5ee8e9.mp3';
 
 const PlaceOrderScreen = () => {
   const history = useNavigate();
@@ -61,6 +63,17 @@ const PlaceOrderScreen = () => {
     );
   };
 
+  let audio = new Audio(RogerRoger);
+  let audio2 = new Audio(TieFighter2);
+
+  const start = () => {
+    audio.play();
+  };
+
+  const tieFighter2 = () => {
+    audio2.play();
+  };
+
   return (
     <>
       <CheckoutSteps step1 step2 step3 step4 />
@@ -101,6 +114,7 @@ const PlaceOrderScreen = () => {
                         <Col>
                           <Link
                             className='link-danger'
+                            onClick={tieFighter2}
                             to={`/product/${item.product}`}
                           >
                             {item.name}
@@ -168,7 +182,10 @@ const PlaceOrderScreen = () => {
                   type='button'
                   className='btn btn-danger btn-block'
                   disabled={cart.cartItems === 0}
-                  onClick={placeOrderHandler}
+                  onClick={() => {
+                    placeOrderHandler();
+                    start();
+                  }}
                 >
                   Place Order
                 </Button>

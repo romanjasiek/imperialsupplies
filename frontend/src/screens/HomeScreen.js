@@ -21,6 +21,7 @@ const HomeScreen = () => {
   return (
     <>
       <h1>Latest Products</h1>
+      <h6 className='galacticbasic'>Latest Products</h6>
       {loading ? (
         <Loader />
       ) : error ? (

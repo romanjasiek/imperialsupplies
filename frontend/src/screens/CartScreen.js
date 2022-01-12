@@ -12,6 +12,9 @@ import {
 } from 'react-bootstrap';
 import Message from '../components/Message';
 import { addToCart, removeFromCart } from '../actions/cartActions';
+import TieFighter from '../sound/d660a0dd-f51a-47e4-9077-6fcc68f17f8b.mp3';
+import Lightsaber from '../sound/eab83056-9940-4be2-a5cd-4d6e2a4dbcd5.mp3';
+import TieFighter2 from '../sound/c80c41f5-824d-41ea-abea-b9245e5ee8e9.mp3';
 
 const CartScreen = () => {
   const { id } = useParams();
@@ -42,10 +45,27 @@ const CartScreen = () => {
     history('/login?redirect=/shipping');
   };
 
+      let audio = new Audio(TieFighter);
+      let audio2 = new Audio(Lightsaber);
+      let audio3 = new Audio(TieFighter2);
+
+      const start = () => {
+        audio.play();
+      };
+
+      const lightsaber = () => {
+        audio2.play();
+      };
+
+      const tieFighter2 = () => {
+        audio3.play();
+      };
+
   return (
     <Row>
       <Col md={8}>
         <h1>Shopping Cart</h1>
+        <h6 className='galacticbasic'>Shopping Cart</h6>
         {cartItems.length === 0 ? (
           <Message>
             Your cart is empty. <Link to='/'>Go Back</Link>
@@ -61,6 +81,7 @@ const CartScreen = () => {
                   <Col md={3}>
                     <Link
                       className='link-danger'
+                      onClick={tieFighter2}
                       to={`/product/${item.product}`}
                     >
                       {item.name}
@@ -90,14 +111,16 @@ const CartScreen = () => {
                     <Button
                       type='button'
                       variant='light'
-                      onClick={() => removeFromCartHandler(item.product)}
+                      onClick={() => {
+                        removeFromCartHandler(item.product);
+                        lightsaber();
+                      }}
                     >
                       <i className='fas fa-trash'></i>
                     </Button>
                   </Col>
                 </Row>
               </ListGroup.Item>
-              
             ))}
           </ListGroup>
         )}
@@ -123,7 +146,10 @@ const CartScreen = () => {
                 type='button'
                 className='btn btn-danger btn-block'
                 disabled={cartItems.length === 0}
-                onClick={checkoutHandler}
+                onClick={() => {
+                  checkoutHandler();
+                  start();
+                }}
               >
                 Proceed To Checkout
               </Button>

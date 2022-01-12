@@ -55,17 +55,21 @@ const ProfileScreen = () => {
     <Row>
       <Col md={3}>
         <h2>Profile</h2>
+        <h6 className='galacticbasic'>Profile</h6>
         {message && <Message variant='secondary'>{message}</Message>}
         {error && <Message variant='danger'>{error}</Message>}
         {success && (
           <Message variant='secondary'>
-            Profile updated <i className='fas fa-check-circle categoryColor'></i>
+            Profile updated{' '}
+            <i className='fas fa-check-circle categoryColor'></i>
           </Message>
         )}
         {loading && <Loader />}
         <Form onSubmit={submitHandler}>
           <Form.Group controlId='name'>
-            <Form.Label>Name</Form.Label>
+            <Form.Label>
+              Name / <span className='galacticbasic__light'>Name</span>
+            </Form.Label>
             <Form.Control
               type='text'
               placeholder='Enter your name'
@@ -74,7 +78,10 @@ const ProfileScreen = () => {
             />
           </Form.Group>
           <Form.Group controlId='email'>
-            <Form.Label>Email Address</Form.Label>
+            <Form.Label>
+              Email Address /{' '}
+              <span className='galacticbasic__light'>Email Address</span>
+            </Form.Label>
             <Form.Control
               type='email'
               placeholder='Enter your email'
@@ -83,7 +90,9 @@ const ProfileScreen = () => {
             />
           </Form.Group>
           <Form.Group controlId='password'>
-            <Form.Label>Password</Form.Label>
+            <Form.Label>
+              Password / <span className='galacticbasic__light'>Password</span>
+            </Form.Label>
             <Form.Control
               type='password'
               placeholder='Enter a Password'
@@ -92,7 +101,10 @@ const ProfileScreen = () => {
             />
           </Form.Group>
           <Form.Group controlId='confirmPassword'>
-            <Form.Label>Confirm Password</Form.Label>
+            <Form.Label>
+              Confirm Password /{' '}
+              <span className='galacticbasic__light'>Confirm</span>
+            </Form.Label>
             <Form.Control
               type='password'
               placeholder='Confirm your Password'
@@ -107,13 +119,14 @@ const ProfileScreen = () => {
               type='submit'
               className='btn btn-danger btn-block my-2'
             >
-              Update
+              Update / <span className='galacticbasic__light'>Update</span>
             </Button>
           </Form.Group>
         </Form>
       </Col>
       <Col md={9}>
         <h2>Order History</h2>
+        <h6 className='galacticbasic'>Order History</h6>
       </Col>
     </Row>
   );

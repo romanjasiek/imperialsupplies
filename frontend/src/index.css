@@ -5,8 +5,8 @@
   src: local('DeathStar'), url(./font/DeathStar-VmWB.ttf) format('truetype');
   font-family: 'Moonhouse';
   src: local('Moonhouse'), url(./font/Moonhouse-yE5M.ttf) format('truetype');
-  font-family: 'Mandalore';
-  src: local('Mandalore'), url(./font/Mandalore-K77lD.otf) format('opentype');
+  font-family: 'GalacticBasic';
+  src: local('GalacticBasic'), url(./font/GalacticBasic-rznB.ttf) format('truetype');
 }
 
 main {
@@ -28,6 +28,25 @@ h3 {
 /* a {
   font-family: 'Mandalore';
 } */
+.galacticbasic {
+  font-family: 'GalacticBasic';
+}
+
+.galacticbasic__light {
+  font-family: 'GalacticBasic';
+  font-size: x-small;
+}
+
+.galacticbasic__small {
+  font-family: 'GalacticBasic';
+  font-size: xx-small
+}
+
+h6 {
+  margin-top: -1rem;
+  padding: 0;
+  color: #444;
+}
 
 .navbar {
     border-top: 1px solid rgb(88, 0, 0);

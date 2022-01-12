@@ -5,6 +5,7 @@ import FormContainer from '../components/FormContainer';
 import CheckoutSteps from '../components/CheckoutSteps';
 import { useDispatch, useSelector } from 'react-redux';
 import { saveShippingAddress } from '../actions/cartActions';
+import TieFighter from '../sound/d660a0dd-f51a-47e4-9077-6fcc68f17f8b.mp3';
 
 const ShippingScreen = () => {
   const history = useNavigate();
@@ -22,8 +23,17 @@ const ShippingScreen = () => {
     e.preventDefault();
     dispatch(saveShippingAddress({ address, city, postalCode, country }));
 
-    history('/payment');
+    // setTimeout(() => {
+    //   history('/payment');
+    // }, 1000);
+      history('/payment');
   };
+
+    let audio = new Audio(TieFighter);
+
+    const start = () => {
+      audio.play();
+    };
 
 
   return (
@@ -73,7 +83,7 @@ const ShippingScreen = () => {
         </Form.Group>
         <Form.Group className='d-grid gap-2'>
           {' '}
-          <Button className='btn btn-danger btn-block my-2' type='submit'>
+          <Button className='btn btn-danger btn-block my-2' type='submit' onClick={start}>
             Continue
           </Button>
         </Form.Group>

@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
 import { login } from '../actions/userActions';
+import VaderBreathing from '../sound/7164495b-0181-43ce-ac4f-ece09a9b40ea.mp3';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
@@ -33,6 +34,12 @@ const LoginScreen = () => {
 
     dispatch(login(email, password));
   };
+
+      let audio = new Audio(VaderBreathing);
+
+      const start = () => {
+        audio.play();
+      };
 
   return (
     <FormContainer>
@@ -64,6 +71,7 @@ const LoginScreen = () => {
             variant='primary'
             type='submit'
             className='btn btn-danger btn-block my-2'
+            onClick={start}
           >
             Sign In
           </Button>
