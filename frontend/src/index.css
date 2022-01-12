@@ -32,14 +32,45 @@ h3 {
   font-family: 'GalacticBasic';
 }
 
+.galacticbasic__darkgrey {
+  font-family: 'GalacticBasic';
+  font-size: 1.2rem;
+  color: #444;
+}
+
 .galacticbasic__light {
   font-family: 'GalacticBasic';
   font-size: x-small;
 }
 
+.galacticbasic__light-darkgrey {
+  font-family: 'GalacticBasic';
+  font-size: x-small;
+  color: #444;
+}
+
 .galacticbasic__small {
   font-family: 'GalacticBasic';
-  font-size: xx-small
+  font-size: xx-small;
+  color: #444;
+}
+
+::-webkit-input-placeholder { /* Edge */
+  color: lightgrey !important;
+  font-family: 'GalacticBasic';
+  font-size: xx-small;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: lightgrey !important;
+  font-family: 'GalacticBasic';
+  font-size: xx-small;
+}
+
+::placeholder {
+  color: lightgrey !important;
+  font-family: 'GalacticBasic';
+  font-size: xx-small;
 }
 
 h6 {

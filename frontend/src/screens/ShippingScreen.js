@@ -40,9 +40,13 @@ const ShippingScreen = () => {
     <FormContainer>
       <CheckoutSteps step1 step2 />
       <h1>Shipping</h1>
+      <h6 className='galacticbasic'>Shipping</h6>
       <Form onSubmit={submitHandler}>
         <Form.Group controlId='address'>
-          <Form.Label>Address</Form.Label>
+          <Form.Label>
+            Address{' '}
+            <span className='galacticbasic__light-darkgrey'>Address</span>
+          </Form.Label>
           <Form.Control
             type='text'
             placeholder='Enter your address'
@@ -52,7 +56,9 @@ const ShippingScreen = () => {
           />
         </Form.Group>
         <Form.Group controlId='city'>
-          <Form.Label>City</Form.Label>
+          <Form.Label>
+            City <span className='galacticbasic__light-darkgrey'>City</span>
+          </Form.Label>
           <Form.Control
             type='text'
             placeholder='Enter your city'
@@ -62,7 +68,10 @@ const ShippingScreen = () => {
           />
         </Form.Group>
         <Form.Group controlId='postalCode'>
-          <Form.Label>Postal Code</Form.Label>
+          <Form.Label>
+            Postal Code{' '}
+            <span className='galacticbasic__light-darkgrey'>Postal Code</span>
+          </Form.Label>
           <Form.Control
             type='text'
             placeholder='Enter your address'
@@ -72,7 +81,10 @@ const ShippingScreen = () => {
           />
         </Form.Group>
         <Form.Group controlId='country'>
-          <Form.Label>Country</Form.Label>
+          <Form.Label>
+            Country{' '}
+            <span className='galacticbasic__light-darkgrey'>Country</span>
+          </Form.Label>
           <Form.Control
             type='text'
             placeholder='Enter your country'
@@ -83,8 +95,13 @@ const ShippingScreen = () => {
         </Form.Group>
         <Form.Group className='d-grid gap-2'>
           {' '}
-          <Button className='btn btn-danger btn-block my-2' type='submit' onClick={start}>
-            Continue
+          <Button
+            className='btn btn-danger btn-block my-2'
+            type='submit'
+            onClick={start}
+          >
+            Continue{' '}
+            <span className='galacticbasic__light-darkgrey'>Continue</span>
           </Button>
         </Form.Group>
       </Form>

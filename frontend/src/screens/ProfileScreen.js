@@ -68,7 +68,7 @@ const ProfileScreen = () => {
         <Form onSubmit={submitHandler}>
           <Form.Group controlId='name'>
             <Form.Label>
-              Name / <span className='galacticbasic__light'>Name</span>
+              Name <span className='galacticbasic__light-darkgrey'>Name</span>
             </Form.Label>
             <Form.Control
               type='text'
@@ -79,8 +79,10 @@ const ProfileScreen = () => {
           </Form.Group>
           <Form.Group controlId='email'>
             <Form.Label>
-              Email Address /{' '}
-              <span className='galacticbasic__light'>Email Address</span>
+              Email Address{' '}
+              <span className='galacticbasic__light-darkgrey'>
+                Email Address
+              </span>
             </Form.Label>
             <Form.Control
               type='email'
@@ -91,7 +93,8 @@ const ProfileScreen = () => {
           </Form.Group>
           <Form.Group controlId='password'>
             <Form.Label>
-              Password / <span className='galacticbasic__light'>Password</span>
+              Password{' '}
+              <span className='galacticbasic__light-darkgrey'>Password</span>
             </Form.Label>
             <Form.Control
               type='password'
@@ -102,8 +105,8 @@ const ProfileScreen = () => {
           </Form.Group>
           <Form.Group controlId='confirmPassword'>
             <Form.Label>
-              Confirm Password /{' '}
-              <span className='galacticbasic__light'>Confirm</span>
+              Confirm Password{' '}
+              <span className='galacticbasic__light-darkgrey'>Confirm</span>
             </Form.Label>
             <Form.Control
               type='password'
@@ -119,7 +122,8 @@ const ProfileScreen = () => {
               type='submit'
               className='btn btn-danger btn-block my-2'
             >
-              Update / <span className='galacticbasic__light'>Update</span>
+              Update{' '}
+              <span className='galacticbasic__light-darkgrey'>Update</span>
             </Button>
           </Form.Group>
         </Form>

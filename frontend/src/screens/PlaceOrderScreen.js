@@ -82,6 +82,7 @@ const PlaceOrderScreen = () => {
           <ListGroup variant='flush'>
             <ListGroup.Item>
               <h3>Shipping</h3>
+              <h6 className='galacticbasic'>Shipping</h6>
               <p>
                 <strong className='categoryColor'>Address: </strong>
                 {cart.shippingAddress.address}, {cart.shippingAddress.city}{' '}
@@ -91,11 +92,13 @@ const PlaceOrderScreen = () => {
             </ListGroup.Item>
             <ListGroup.Item>
               <h3>Payment Method</h3>
+              <h6 className='galacticbasic'>Payment Method</h6>
               <strong className='categoryColor'>Method: </strong>
               {cart.paymentMethod}
             </ListGroup.Item>
             <ListGroup.Item>
               <h3>Order Items</h3>
+              <h6 className='galacticbasic'>Order Items</h6>
               {cart.cartItems.length === 0 ? (
                 <Message>Your cart is empty</Message>
               ) : (
@@ -139,6 +142,7 @@ const PlaceOrderScreen = () => {
             <ListGroup variant='flush'>
               <ListGroup.Item>
                 <h2>Order Summary</h2>
+                <h6 className='galacticbasic__darkgrey'>Order Summary</h6>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
@@ -187,7 +191,10 @@ const PlaceOrderScreen = () => {
                     start();
                   }}
                 >
-                  Place Order
+                  Place Order{' '}
+                  <span className='galacticbasic__light-darkgrey'>
+                    Place Order
+                  </span>
                 </Button>
               </ListGroup.Item>
             </ListGroup>

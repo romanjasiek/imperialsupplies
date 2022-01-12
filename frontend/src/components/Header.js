@@ -10,23 +10,24 @@ import ImperialMarch from '../sound/imperial-march-ringtone.mp3';
 const Header = () => {
   const dispatch = useDispatch();
 
-  const userLogin = useSelector((state) => state.userLogin)
+  const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
   const logoutHandler = () => {
     dispatch(logout());
-  }
+  };
 
-      let audio = new Audio(TieFighter2);
-      let audio2 = new Audio(ImperialMarch);
+  let audio = new Audio(TieFighter2);
+  let audio2 = new Audio(ImperialMarch);
 
-      const start = () => {
-        audio.play();
-      };
 
-      const start2 = () => {
-        audio2.play();
-      };
+  const start = () => {
+    audio.play();
+  };
+
+  const start2 = () => {
+    audio2.play();
+  };
 
 
   return (
@@ -41,7 +42,7 @@ const Header = () => {
       >
         <Container>
           <LinkContainer to='/'>
-            <Navbar.Brand className='title'>
+            <Navbar.Brand className='title' onClick={start}>
               <i className='fab fa-empire categoryColor' onClick={start2}></i>{' '}
               Imperial Supplies
             </Navbar.Brand>
@@ -63,7 +64,10 @@ const Header = () => {
                   <LinkContainer to='/profile'>
                     <NavDropdown.Item onClick={start}>
                       <i className='fas fa-user-circle categoryColor'></i>{' '}
-                      Profile
+                      Profile{' '}
+                      <span className='galacticbasic__light-darkgrey'>
+                        Profile
+                      </span>
                     </NavDropdown.Item>
                   </LinkContainer>
                   <NavDropdown.Divider />
@@ -75,7 +79,10 @@ const Header = () => {
                       start();
                     }}
                   >
-                    <i className='fas fa-sign-out-alt categoryColor'></i> Logout
+                    <i className='fas fa-sign-out-alt categoryColor'></i> Logout{' '}
+                    <span className='galacticbasic__light-darkgrey'>
+                      Logout
+                    </span>
                   </NavDropdown.Item>
                 </NavDropdown>
               ) : (

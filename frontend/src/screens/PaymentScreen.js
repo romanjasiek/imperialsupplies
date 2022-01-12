@@ -37,9 +37,13 @@ const [paymentMethod, setPaymentMethod] = useState('PayPal');
     <FormContainer>
       <CheckoutSteps step1 step2 step3 />
       <h1>Payment Method</h1>
+      <h6 className='galacticbasic'>Payment Method</h6>
       <Form onSubmit={submitHandler}>
         <Form.Group>
-          <Form.Label as='legend'>Select Payment Method</Form.Label>
+          <Form.Label as='legend'>
+            Select Payment Method{' '}
+            <span className='galacticbasic__darkgrey'>Payment Method</span>
+          </Form.Label>
         </Form.Group>
         <Form.Group>
           <Row>
@@ -70,7 +74,8 @@ const [paymentMethod, setPaymentMethod] = useState('PayPal');
             type='submit'
             onClick={tieFighter}
           >
-            Continue
+            Continue{' '}
+            <span className='galacticbasic__light-darkgrey'>Continue</span>
           </Button>
         </Form.Group>
       </Form>

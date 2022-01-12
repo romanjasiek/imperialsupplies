@@ -54,7 +54,8 @@ const ProductScreen = () => {
   return (
     <>
       <Link className='btn btn-dark my-3' onClick={start} to='/'>
-        <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go back
+        <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go back{' '}
+        <span className='galacticbasic__light-darkgrey'>Go Back</span>
       </Link>
       {loading ? (
         <Loader />
@@ -69,7 +70,9 @@ const ProductScreen = () => {
             <ListGroup variant='flush'>
               <ListGroup.Item>
                 <h3 className='price-color'>{product.name}</h3>
-                <h6 className='price-color galacticbasic__small'>{product.name}</h6>
+                <h6 className='price-color galacticbasic__small'>
+                  {product.name}
+                </h6>
               </ListGroup.Item>
               <ListGroup.Item>
                 <strong className='categoryColor'>Brand:</strong>{' '}
