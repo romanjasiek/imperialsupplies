@@ -16,6 +16,7 @@ import Message from '../components/Message';
 import { listProductDetails } from '../actions/productActions';
 import TieFighter2 from '../sound/c80c41f5-824d-41ea-abea-b9245e5ee8e9.mp3';
 import ThisIsTheWay from '../sound/cac7f9ab-f6a9-44b3-a37c-abe78d1dbd87.mp3';
+import ElectricGlitch from '../sound/mixkit-small-electric-glitch-2595.mp3';
 
 const ProductScreen = () => {
   const [qty, setQty] = useState(1);
@@ -36,20 +37,25 @@ const ProductScreen = () => {
     dispatch(listProductDetails(id));
   }, [dispatch, id]);
 
-  const addToCartHandler = () => { 
+  const addToCartHandler = () => {
     navigate(`/cart/${id}?qty=${qty}`);
   };
 
-        let audio = new Audio(TieFighter2);
-        let audio2 = new Audio(ThisIsTheWay);
+  let audio = new Audio(TieFighter2);
+  let audio2 = new Audio(ThisIsTheWay);
+  let audio3 = new Audio(ElectricGlitch);
 
-        const start = () => {
-          audio.play();
-        };
+  const start = () => {
+    audio.play();
+  };
 
-        const thisistheway = () => {
-          audio2.play();
-        };
+  const thisistheway = () => {
+    audio2.play();
+  };
+
+  const electricGlitch = () => {
+    audio3.play();
+  };
 
   return (
     <>
@@ -64,7 +70,12 @@ const ProductScreen = () => {
       ) : (
         <Row>
           <Col md={6}>
-            <Image src={product.image} alt={product.name} fluid />
+            <Image
+              onMouseEnter={electricGlitch}
+              src={product.image}
+              alt={product.name}
+              fluid
+            />
           </Col>
           <Col md={3}>
             <ListGroup variant='flush'>
