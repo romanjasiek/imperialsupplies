@@ -68,7 +68,10 @@ const CartScreen = () => {
         <h6 className='galacticbasic'>Shopping Cart</h6>
         {cartItems.length === 0 ? (
           <Message>
-            Your cart is empty. <Link to='/'>Go Back</Link>
+            Your cart is empty.{' '}
+            <Link onClick={tieFighter2} to='/'>
+              Go Back
+            </Link>
           </Message>
         ) : (
           <ListGroup variant='flush'>
@@ -76,7 +79,13 @@ const CartScreen = () => {
               <ListGroup.Item key={item.product}>
                 <Row>
                   <Col md={2}>
-                    <Image src={item.image} alt={item.name} fluid rounded />
+                    <Image
+                      className='img-border'
+                      src={item.image}
+                      alt={item.name}
+                      fluid
+                      rounded
+                    />
                   </Col>
                   <Col md={3}>
                     <Link

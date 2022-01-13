@@ -24,12 +24,12 @@ const Product = ({ product }) => {
   return (
     <Card className='my-3 p-3 rounded'>
       <Link onClick={start} to={`/product/${product._id}`}>
-            <Card.Img
-              onMouseEnter={electricGlitch}
-              src={product.image}
-              variant='top'
-              className='gradient-border'
-            />
+        <Card.Img
+          onMouseEnter={electricGlitch}
+          src={product.image}
+          variant='top'
+          className='img-border'
+        />
       </Link>
       <Card.Body>
         <Link

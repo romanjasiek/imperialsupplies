@@ -72,6 +72,7 @@ const ProductScreen = () => {
           <Col md={6}>
             <Image
               onMouseEnter={electricGlitch}
+              className='img-border'
               src={product.image}
               alt={product.name}
               fluid
