@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Card } from 'react-bootstrap';
 import Rating from './Rating';
 import TieFighter2 from '../sound/c80c41f5-824d-41ea-abea-b9245e5ee8e9.mp3';
-import ElectricGlitch from '../sound/mixkit-small-electric-glitch-2595.mp3';
+import ElectricGlitch from '../sound/mixkit-toy-mechanism-2823.mp3';
 
 
 const Product = ({ product }) => {

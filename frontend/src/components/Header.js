@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
@@ -7,7 +7,9 @@ import Binoculars from '../components/Binoculars';
 import TieFighter2 from '../sound/c80c41f5-824d-41ea-abea-b9245e5ee8e9.mp3';
 import ImperialMarch from '../sound/imperial-march-ringtone.mp3';
 
+
 const Header = () => {
+    
   const dispatch = useDispatch();
 
   const userLogin = useSelector((state) => state.userLogin);
@@ -94,6 +96,9 @@ const Header = () => {
               )}
             </Nav>
           </Navbar.Collapse>
+          <span>
+            <i className='fas fa-volume-mute mute-control ps-3'></i>
+          </span>
         </Container>
       </Navbar>
     </header>

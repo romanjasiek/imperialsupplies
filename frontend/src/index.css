@@ -68,6 +68,11 @@ img:hover{
   }
 }
 
+.mute-control {
+  color: #444;
+  cursor: pointer;
+}
+
 /* a {
   font-family: 'Mandalore';
 } */

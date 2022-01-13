@@ -12,10 +12,12 @@ import ProfileScreen from './screens/ProfileScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
+// import './loader.js';
 // import Sound from 'react-sound';
 // import BackgroundHum from './sound/tng_hum_clean.mp3';
 
 const App = () => {
+
   return (
     <Router>
       <Fragment>
