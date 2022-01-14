@@ -38,6 +38,7 @@ const LoginScreen = () => {
       let audio = new Audio(VaderBreathing);
 
       const start = () => {
+        audio.volume = 0.3;
         audio.play();
       };
 

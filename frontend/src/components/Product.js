@@ -13,10 +13,12 @@ const Product = ({ product }) => {
     let audio2 = new Audio(ElectricGlitch);
 
     const start = () => {
+      audio.volume = 0.1;
       audio.play();
     };
 
     const electricGlitch = () => {
+      audio2.volume = 0.1;
       audio2.play();
     };
 

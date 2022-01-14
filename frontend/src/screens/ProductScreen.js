@@ -46,6 +46,7 @@ const ProductScreen = () => {
   let audio3 = new Audio(ElectricGlitch);
 
   const start = () => {
+    audio.volume = 0.1;
     audio.play();
   };
 
@@ -54,6 +55,7 @@ const ProductScreen = () => {
   };
 
   const electricGlitch = () => {
+    audio3.volume = 0.1;
     audio3.play();
   };
 

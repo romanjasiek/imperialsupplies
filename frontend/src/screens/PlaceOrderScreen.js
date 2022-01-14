@@ -67,10 +67,12 @@ const PlaceOrderScreen = () => {
   let audio2 = new Audio(TieFighter2);
 
   const start = () => {
+    audio.volume = 0.3;
     audio.play();
   };
 
   const tieFighter2 = () => {
+    audio2.volume = 0.1;
     audio2.play();
   };
 

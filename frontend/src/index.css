@@ -68,6 +68,7 @@ h3 {
   }
 }
 
+
 .mute-control {
   color: #444;
   cursor: pointer;
@@ -167,10 +168,6 @@ h6 {
 .product-screen-background {
     background-color: #333;
 }
-
-/* Animated image border */
-
-
 
 
 /* Star Wars Binoculars (Source: https://codepen.io/propjockey/pen/NWazORr) */
@@ -730,11 +727,11 @@ body {
   transform-style: preserve-3d;
   background-image: linear-gradient(
     -160deg,
-    #2f4661,
-    #31445f,
-    #425971,
-    #acb2b3,
-    #d7d0ca
+    #612f2f,
+    #5f3131,
+    #714242,
+    #4b4747,
+    #2b2727
   );
   text-transform: uppercase;
   border: 20px solid #444;
@@ -755,10 +752,10 @@ body {
   left: 300px;
   background-image: linear-gradient(
     to bottom left,
-    #2f4661,
-    #2d3f5b,
-    #2d3f5b,
-    #a4a9b0
+    #612f2f,
+    #5b2d2d,
+    #5b2d2d,
+    #b0a4a4
   );
   z-index: -1;
 }

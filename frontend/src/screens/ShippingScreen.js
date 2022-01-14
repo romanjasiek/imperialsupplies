@@ -32,6 +32,7 @@ const ShippingScreen = () => {
     let audio = new Audio(TieFighter);
 
     const start = () => {
+      audio.volume = 0.1;
       audio.play();
     };
 

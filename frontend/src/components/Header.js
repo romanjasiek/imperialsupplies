@@ -24,10 +24,12 @@ const Header = () => {
 
 
   const start = () => {
+    audio.volume = 0.1;
     audio.play();
   };
 
   const start2 = () => {
+    audio2.volume = 0.1;
     audio2.play();
   };
 

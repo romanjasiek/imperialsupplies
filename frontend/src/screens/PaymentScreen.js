@@ -30,6 +30,7 @@ const [paymentMethod, setPaymentMethod] = useState('PayPal');
       let audio = new Audio(TieFighter);
 
       const tieFighter = () => {
+        audio.volume = 0.1;
         audio.play();
       };
 

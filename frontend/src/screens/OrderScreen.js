@@ -7,7 +7,7 @@ import Loader from '../components/Loader';
 import { getOrderDetails } from '../actions/orderActions';
 // import { ORDER_CREATE_RESET } from '../constants/orderConstants';
 // import { USER_DETAIL_RESET } from '../constants/userConstants';
-import RogerRoger from '../sound/fc72e034-de5c-480c-a9f9-4f6338cbc7b5.mp3';
+// import RogerRoger from '../sound/fc72e034-de5c-480c-a9f9-4f6338cbc7b5.mp3';
 import TieFighter2 from '../sound/c80c41f5-824d-41ea-abea-b9245e5ee8e9.mp3';
 import EmpireThankYou from '../components/EmpireThankYou';
 
@@ -49,14 +49,15 @@ useEffect(() => {
 }, [ dispatch, history, order, orderId,userInfo ]);
 
 
-  let audio = new Audio(RogerRoger);
+  // let audio = new Audio(RogerRoger);
   let audio2 = new Audio(TieFighter2);
 
-  const start = () => {
-    audio.play();
-  };
+  // const start = () => {
+  //   audio.play();
+  // };
 
   const tieFighter2 = () => {
+    audio2.volume = 0.1;
     audio2.play();
   };
 

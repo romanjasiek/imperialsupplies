@@ -50,14 +50,17 @@ const CartScreen = () => {
       let audio3 = new Audio(TieFighter2);
 
       const start = () => {
+        audio.volume = 0.1;
         audio.play();
       };
 
       const lightsaber = () => {
+        audio2.volume = 0.3;
         audio2.play();
       };
 
       const tieFighter2 = () => {
+        audio3.volume = 0.1;
         audio3.play();
       };
 
