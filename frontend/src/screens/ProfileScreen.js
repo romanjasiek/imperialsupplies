@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Form, Button, Row, Col } from 'react-bootstrap';
+import { Form, Button, Row, Col, Table } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
 import { getUserDetail, updateUserProfile } from '../actions/userActions';
+import { listMyOrders } from '../actions/orderActions';
 import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants';
 import TieFighter2 from '../sound/c80c41f5-824d-41ea-abea-b9245e5ee8e9.mp3';
 
@@ -25,20 +27,24 @@ const ProfileScreen = () => {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
-    const userUpdateProfile = useSelector((state) => state.userUpdateProfile);
-    const { success } = userUpdateProfile;
+  const userUpdateProfile = useSelector((state) => state.userUpdateProfile);
+  const { success } = userUpdateProfile;
+
+    const orderListMy = useSelector((state) => state.orderListMy);
+    const { loading: loadingOrders, error:errorOrders, orders } = orderListMy;
 
   useEffect(() => {
     if (!userInfo) {
       history('/login');
     } else {
-        if(!user || !user.name || success) {
-            dispatch({ type: USER_UPDATE_PROFILE_RESET });
-            dispatch(getUserDetail('profile'));
-        } else {
-            setName(user.name);
-            setEmail(user.email);
-        }
+      if (!user || !user.name || success) {
+        dispatch({ type: USER_UPDATE_PROFILE_RESET });
+        dispatch(getUserDetail('profile'));
+        dispatch(listMyOrders());
+      } else {
+        setName(user.name);
+        setEmail(user.email);
+      }
     }
   }, [dispatch, history, userInfo, user, success]);
 
@@ -52,12 +58,12 @@ const ProfileScreen = () => {
     }
   };
 
-    let audio = new Audio(TieFighter2);
+  let audio = new Audio(TieFighter2);
 
-    const tieFighter2 = () => {
-      audio.volume = 0.1;
-      audio.play();
-    };
+  const tieFighter2 = () => {
+    audio.volume = 0.1;
+    audio.play();
+  };
 
   return (
     <Row>
@@ -144,6 +150,54 @@ const ProfileScreen = () => {
       <Col md={9}>
         <h2>Order History</h2>
         <h6 className='galacticbasic'>Order History</h6>
+        {loadingOrders ? (
+          <Loader />
+        ) : errorOrders ? (
+          <Message variant='danger'>{errorOrders}</Message>
+        ) : (
+          <Table striped bordered hover responsive className='table-sm'>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>DATE</th>
+                <th>TOTAL</th>
+                <th>PAID</th>
+                <th>DELIVERED</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {orders.map((order) => (
+                <tr key={order._id}>
+                  <td>{order._id}</td>
+                  <td>{order.createdAt.substring(0, 10)}</td>
+                  <td>{order.totalPrice}</td>
+                  <td>
+                    {order.isPaid ? (
+                      order.paidAt.substring(0, 10)
+                    ) : (
+                      <i className='fas fa-times' style={{ color: 'red' }}></i>
+                    )}
+                  </td>
+                  <td>
+                    {order.isDelivered ? (
+                      order.deliveredAt.substring(0, 10)
+                    ) : (
+                      <i className='fas fa-times' style={{ color: 'red' }}></i>
+                    )}
+                  </td>
+                  <td>
+                    <LinkContainer to={`/order/${order._id}`}>
+                      <Button className='btn-sm' variant='light'>
+                        Details
+                      </Button>
+                    </LinkContainer>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        )}
       </Col>
     </Row>
   );
