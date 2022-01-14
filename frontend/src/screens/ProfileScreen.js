@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
 import { getUserDetail, updateUserProfile } from '../actions/userActions';
 import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants';
+import TieFighter2 from '../sound/c80c41f5-824d-41ea-abea-b9245e5ee8e9.mp3';
 
 const ProfileScreen = () => {
   const [name, setName] = useState('');
@@ -51,9 +52,20 @@ const ProfileScreen = () => {
     }
   };
 
+    let audio = new Audio(TieFighter2);
+
+    const tieFighter2 = () => {
+      audio.volume = 0.1;
+      audio.play();
+    };
+
   return (
     <Row>
       <Col md={3}>
+        <Link className='btn btn-dark my-3' onClick={tieFighter2} to='/'>
+          <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go back{' '}
+          <span className='galacticbasic__light-darkgrey'>Go Back</span>
+        </Link>
         <h2>Profile</h2>
         <h6 className='galacticbasic'>Profile</h6>
         {message && <Message variant='secondary'>{message}</Message>}
@@ -121,6 +133,7 @@ const ProfileScreen = () => {
               variant='primary'
               type='submit'
               className='btn btn-danger btn-block my-2'
+              onClick={tieFighter2}
             >
               Update{' '}
               <span className='galacticbasic__light-darkgrey'>Update</span>

@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
 import { register } from '../actions/userActions';
+import VaderBreathing from '../sound/7164495b-0181-43ce-ac4f-ece09a9b40ea.mp3';
+import TieFighter2 from '../sound/c80c41f5-824d-41ea-abea-b9245e5ee8e9.mp3';
 
 const RegisterScreen = () => {
   const [name, setName] = useState('');
@@ -34,11 +36,24 @@ const RegisterScreen = () => {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    if(password !== confirmPassword) {
-        setMessage('Passwords do not match');
+    if (password !== confirmPassword) {
+      setMessage('Passwords do not match');
     } else {
-        dispatch(register(name, email, password));
+      dispatch(register(name, email, password));
     }
+  };
+
+  let audio = new Audio(VaderBreathing);
+  let audio2 = new Audio(TieFighter2);
+
+  const vaderBreathing = () => {
+    audio.volume = 0.3;
+    audio.play();
+  };
+
+  const tieFighter2 = () => {
+    audio2.volume = 0.1;
+    audio2.play();
   };
 
   return (
@@ -90,6 +105,7 @@ const RegisterScreen = () => {
             variant='primary'
             type='submit'
             className='btn btn-danger btn-block my-2'
+            onClick={vaderBreathing}
           >
             Register
           </Button>
@@ -99,12 +115,13 @@ const RegisterScreen = () => {
         <Col className='d-flex justify-content-between'>
           Already a Customer?{' '}
           <Link
+            onClick={tieFighter2}
             to={redirect ? `/login?redirect=${redirect}` : '/login'}
             className='px-2 link-danger'
           >
             <i className='fab fa-empire categoryColor px-1'></i>Sign in
           </Link>
-          <Link className='ms-auto link-secondary' to='/'>
+          <Link onClick={tieFighter2} className='ms-auto link-secondary' to='/'>
             <i className='fas fa-arrow-alt-circle-left categoryColor px-1'></i>
             Go back
           </Link>
