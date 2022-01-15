@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
@@ -56,11 +56,13 @@ const Header = () => {
             <Nav className='ms-auto'>
               <LinkContainer onClick={start} to='/cart'>
                 <Nav.Link>
-                  <i className='fas fa-shopping-cart categoryColor'></i> Cart
+                  <i className='fas fa-shopping-cart categoryColor'></i>{' '}
+                  <span className='link-danger'>Cart</span>
                 </Nav.Link>
               </LinkContainer>
               {userInfo ? (
                 <NavDropdown
+                  className='link-danger'
                   title={`Welcome, ${userInfo.name}`}
                   id='username'
                   onClick={start}
@@ -96,11 +98,21 @@ const Header = () => {
                   </Nav.Link>
                 </LinkContainer>
               )}
+              {userInfo && userInfo.isAdmin && (
+                <NavDropdown title='Admin' id='adminmenu'>
+                  <LinkContainer to='/admin/userlist'>
+                    <NavDropdown.Item>Users</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to='/admin/productlist'>
+                    <NavDropdown.Item>Products</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to='/admin/orderlist'>
+                    <NavDropdown.Item>Orders</NavDropdown.Item>
+                  </LinkContainer>
+                </NavDropdown>
+              )}
             </Nav>
           </Navbar.Collapse>
-          <span>
-            <i className='fas fa-volume-mute mute-control ps-3'></i>
-          </span>
         </Container>
       </Navbar>
     </header>

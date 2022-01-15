@@ -46,6 +46,10 @@ h3 {
           animation: flicker 3s linear infinite;
 }
 
+table, thead, td  {
+  border: 1px solid darkred;
+}
+
 @-webkit-keyframes flicker {
   0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
     opacity: 0.99;
@@ -129,10 +133,18 @@ h6 {
 }
 
 .navbar {
+  background-image: url(./img/texture.jpeg);
+  background-size: cover;
     border-top: 1px solid rgb(88, 0, 0);
     box-shadow: 0 4px 2px -2px darkred;
 }
-    
+
+.card {
+  border: 1px solid rgba(173, 216, 230, 0.2);
+  background-image: url(./img/texture3.jpg);
+  background-size:cover;
+}
+
 .title {
     font-family: 'DeathStar';
     font-size: 4.5rem;
