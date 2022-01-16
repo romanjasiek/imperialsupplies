@@ -80,7 +80,7 @@ const OrderScreen = () => {
         setSdkReady(true);
       }
     }
-  }, [dispatch, orderId, successPay, successDeliver, order]);
+  }, [dispatch, orderId, successPay, successDeliver, order, history, userInfo]);
 
   const successPaymentHandler = (paymentResult) => {
     console.log(paymentResult);
@@ -124,7 +124,7 @@ const OrderScreen = () => {
               </p>
               <p>
                 <strong className='categoryColor'>Email: </strong>{' '}
-                <a href={`mailto:${order.user.email}`}>{order.user.email}</a>
+                <a className='link-danger' href={`mailto:${order.user.email}`}>{order.user.email}</a>
               </p>
               <p>
                 <strong className='categoryColor'>Address:</strong>

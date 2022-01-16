@@ -46,8 +46,16 @@ h3 {
           animation: flicker 3s linear infinite;
 }
 
-table, thead, td  {
+table, thead, td, tr  {
   border: 1px solid darkred;
+}
+
+.table-striped {
+  color: darkred;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+  color: darkred;
 }
 
 @-webkit-keyframes flicker {
@@ -132,10 +140,22 @@ h6 {
   color: #444;
 }
 
+main {
+  background-image: url(./img/texture2.jpg);
+  background-size: cover;
+}
+
 .navbar {
   background-image: url(./img/texture.jpeg);
   background-size: cover;
     border-top: 1px solid rgb(88, 0, 0);
+    box-shadow: 0 4px 2px -2px darkred;
+}
+
+footer {
+    background-image: url(./img/texture.jpeg);
+  background-size: cover;
+      border-top: 1px solid rgb(88, 0, 0);
     box-shadow: 0 4px 2px -2px darkred;
 }
 
@@ -161,6 +181,10 @@ h6 {
 .price-color {
   color: skyblue;
   text-shadow: 0 0 1px skyblue;
+}
+
+.delete-button {
+  background-color: skyblue;
 }
 
 .categoryColor {

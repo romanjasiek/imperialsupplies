@@ -55,10 +55,14 @@ const UserListScreen = () => {
           <tbody>
             {users.map((user) => (
               <tr key={user._id}>
-                <td>{user._id}</td>
+                <td>
+                  <span className='price-color'>{user._id}</span>
+                </td>
                 <td>{user.name}</td>
                 <td>
-                  <a href={`mailto:${user.email}`}>{user.email}</a>
+                  <a className='link-danger' href={`mailto:${user.email}`}>
+                    {user.email}
+                  </a>
                 </td>
                 <td>
                   {user.isAdmin ? (

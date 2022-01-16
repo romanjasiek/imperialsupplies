@@ -122,7 +122,7 @@ const CartScreen = () => {
                   <Col md={2}>
                     <Button
                       type='button'
-                      variant='light'
+                      className='delete-button'
                       onClick={() => {
                         removeFromCartHandler(item.product);
                         lightsaber();
