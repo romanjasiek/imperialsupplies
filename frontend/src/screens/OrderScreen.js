@@ -124,7 +124,9 @@ const OrderScreen = () => {
               </p>
               <p>
                 <strong className='categoryColor'>Email: </strong>{' '}
-                <a className='link-danger' href={`mailto:${order.user.email}`}>{order.user.email}</a>
+                <a className='link-danger' href={`mailto:${order.user.email}`}>
+                  {order.user.email}
+                </a>
               </p>
               <p>
                 <strong className='categoryColor'>Address:</strong>
@@ -133,8 +135,8 @@ const OrderScreen = () => {
                 {order.shippingAddress.country}
               </p>
               {order.isDelivered ? (
-                <Message variant='secondary'>
-                  Delivered on {order.deliveredAt}
+                <Message variant='secondary price-color'>
+                  Delivered on {order.deliveredAt.substring(0, 10)}
                 </Message>
               ) : (
                 <Message variant='danger'>Not Delivered</Message>
@@ -149,7 +151,9 @@ const OrderScreen = () => {
                 {order.paymentMethod}
               </p>
               {order.isPaid ? (
-                <Message variant='secondary'>Paid on {order.paidAt}</Message>
+                <Message variant='secondary price-color'>
+                  Paid on {order.paidAt.substring(0, 10)}
+                </Message>
               ) : (
                 <Message variant='danger'>Not Paid</Message>
               )}
@@ -246,9 +250,10 @@ const OrderScreen = () => {
                 userInfo.isAdmin &&
                 order.isPaid &&
                 !order.isDelivered && (
-                  <ListGroup.Item>
+                  <ListGroup.Item className='d-grid gap-2'>
                     <Button
                       type='button'
+                      variant='danger'
                       className='btn btn-block'
                       onClick={() => {
                         deliverHandler();

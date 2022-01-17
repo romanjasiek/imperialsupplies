@@ -5,8 +5,8 @@ const TextScroller = ({ text }) => {
   const [key, setKey] = useState(1);
 
   const scrolling = useSpring({
-    from: { transform: 'translate(60%,0)' },
-    to: { transform: 'translate(-60%,0)' },
+    from: { transform: 'translate(90%,0)' },
+    to: { transform: 'translate(-100%,0)' },
     config: { duration: 50000, loop: true },
     reset: true,
     //reverse: key % 2 == 0,
