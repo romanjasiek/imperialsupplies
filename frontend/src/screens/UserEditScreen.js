@@ -11,8 +11,8 @@ import TieFighter2 from '../sound/c80c41f5-824d-41ea-abea-b9245e5ee8e9.mp3';
 import VaderBreathing from '../sound/7164495b-0181-43ce-ac4f-ece09a9b40ea.mp3';
 
 const UserEditScreen = () => {
-        const history = useNavigate();
-        const { id } = useParams();
+  const history = useNavigate();
+  const { id } = useParams();
 
   const userId = id;
 
@@ -52,18 +52,18 @@ const UserEditScreen = () => {
     dispatch(updateUser({ _id: userId, name, email, isAdmin }));
   };
 
-    let audio = new Audio(TieFighter2);
-    let audio2 = new Audio(VaderBreathing);
+  let audio = new Audio(TieFighter2);
+  let audio2 = new Audio(VaderBreathing);
 
-    const tieFighter2 = () => {
-      audio.volume = 0.1;
-      audio.play();
-    };
+  const tieFighter2 = () => {
+    audio.volume = 0.1;
+    audio.play();
+  };
 
-          const start = () => {
-            audio2.volume = 0.3;
-            audio2.play();
-          };
+  const start = () => {
+    audio2.volume = 0.3;
+    audio2.play();
+  };
 
   return (
     <>
@@ -110,17 +110,17 @@ const UserEditScreen = () => {
               ></Form.Check>
             </Form.Group>
 
-        <Form.Group className='d-grid gap-2'>
-          {' '}
-          <Button
-            variant='primary'
-            type='submit'
-            className='btn btn-danger btn-block my-2'
-            onClick={start}
-          >
-            Update
-          </Button>
-        </Form.Group>
+            <Form.Group className='d-grid gap-2'>
+              {' '}
+              <Button
+                variant='primary'
+                type='submit'
+                className='btn btn-danger btn-block my-2'
+                onClick={start}
+              >
+                Update
+              </Button>
+            </Form.Group>
           </Form>
         )}
       </FormContainer>

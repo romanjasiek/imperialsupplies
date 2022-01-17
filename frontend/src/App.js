@@ -15,15 +15,21 @@ import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
 import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
+import ProductListScreen from './screens/ProductListScreen';
+import ProductEditScreen from './screens/ProductEditScreen';
+import TextScroller from './components/TextScroller';
 // import './loader.js';
 // import Sound from 'react-sound';
 // import BackgroundHum from './sound/tng_hum_clean.mp3';
 
 const App = () => {
-
   return (
     <Router>
       <Fragment>
+        <TextScroller
+          text='Please note: This is NOT a real shop. No orders will be processed! Every entered data will be wiped out frequently.
+          Copyrighted material is used in solely within the context of the Fair Use policy.'
+        />
         <Header />
         {/* <Sound
           url={BackgroundHum}
@@ -47,6 +53,25 @@ const App = () => {
               <Route path='/order/:id' element={<OrderScreen />} />
               <Route path='/admin/userlist' element={<UserListScreen />} />
               <Route path='/admin/user/:id/edit' element={<UserEditScreen />} />
+              <Route
+                path='/admin/productlist'
+                element={<ProductListScreen />}
+              />
+              <Route
+                path='/admin/productlist/:pageNumber'
+                element={<ProductListScreen />}
+              />
+              <Route
+                path='/admin/product/:id/edit'
+                element={<ProductEditScreen />}
+              />
+              {/* <Route path='/admin/orderlist' component={OrderListScreen} /> */}
+              <Route path='/search/:keyword' element={<HomeScreen />} />
+              <Route path='/page/:pageNumber' element={<HomeScreen />} />
+              <Route
+                path='/search/:keyword/page/:pageNumber'
+                element={<HomeScreen />}
+              />
             </Routes>
           </Container>
         </main>

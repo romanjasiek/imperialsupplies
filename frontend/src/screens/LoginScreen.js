@@ -24,11 +24,11 @@ const LoginScreen = () => {
   //   const redirect = location.search.split('=')[1];
   const redirect = search ? search.split('=')[1] : '/';
 
-    useEffect(() => {
-        if (userInfo) {
-            history(redirect)
-        }
-    }, [history, userInfo, redirect]);
+  useEffect(() => {
+    if (userInfo) {
+      history(redirect);
+    }
+  }, [history, userInfo, redirect]);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -36,18 +36,18 @@ const LoginScreen = () => {
     dispatch(login(email, password));
   };
 
-      let audio = new Audio(VaderBreathing);
-      let audio2 = new Audio(TieFighter2);
+  let audio = new Audio(VaderBreathing);
+  let audio2 = new Audio(TieFighter2);
 
-      const start = () => {
-        audio.volume = 0.3;
-        audio.play();
-      };
+  const start = () => {
+    audio.volume = 0.1;
+    audio.play();
+  };
 
-        const tieFighter2 = () => {
-          audio2.volume = 0.1;
-          audio2.play();
-        };
+  const tieFighter2 = () => {
+    audio2.volume = 0.1;
+    audio2.play();
+  };
 
   return (
     <FormContainer>
@@ -89,14 +89,15 @@ const LoginScreen = () => {
         <Col className='d-flex justify-content-between'>
           New Customer?{' '}
           <Link
-            onClick={tieFighter2} to={redirect ? `/register?redirect=${redirect}` : '/register'}
+            onClick={tieFighter2}
+            to={redirect ? `/register?redirect=${redirect}` : '/register'}
             className='px-2 link-danger'
           >
             <i className='fab fa-empire categoryColor px-1'></i>Sign up here
           </Link>
           <Link className='ms-auto link-secondary' to='/'>
-            <i className='fas fa-arrow-alt-circle-left categoryColor px-1'></i>Go
-            back
+            <i className='fas fa-arrow-alt-circle-left categoryColor px-1'></i>
+            Go back
           </Link>
         </Col>
       </Row>
