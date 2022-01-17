@@ -168,7 +168,8 @@ footer {
 .title {
     font-family: 'DeathStar';
     font-size: 4.5rem;
-    padding: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
     margin: 0;
     text-shadow: 0 0 15px red;
 

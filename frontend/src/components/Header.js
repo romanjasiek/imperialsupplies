@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { logout } from '../actions/userActions';
+import SearchBox from '../components/SearchBox';
 import Binoculars from '../components/Binoculars';
 import TieFighter2 from '../sound/c80c41f5-824d-41ea-abea-b9245e5ee8e9.mp3';
 import ImperialMarch from '../sound/imperial-march-ringtone.mp3';
 
-
 const Header = () => {
-    
+  
   const dispatch = useDispatch();
 
   const userLogin = useSelector((state) => state.userLogin);
@@ -22,7 +22,6 @@ const Header = () => {
   let audio = new Audio(TieFighter2);
   let audio2 = new Audio(ImperialMarch);
 
-
   const start = () => {
     audio.volume = 0.1;
     audio.play();
@@ -32,7 +31,6 @@ const Header = () => {
     audio2.volume = 0.1;
     audio2.play();
   };
-
 
   return (
     <header>
@@ -53,16 +51,21 @@ const Header = () => {
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
+            {/* <Route renderer={(history) => <SearchBox history={history} />} /> */}
+            <SearchBox />
             <Nav className='ms-auto'>
-              <LinkContainer onClick={start} to='/cart'>
+              <LinkContainer
+                className='ms-2'
+                onClick={start}
+                to='/cart'
+              >
                 <Nav.Link>
                   <i className='fas fa-shopping-cart categoryColor'></i>{' '}
-                  <span className='link-danger'>Cart</span>
                 </Nav.Link>
               </LinkContainer>
               {userInfo ? (
                 <NavDropdown
-                  className='link-danger'
+                  className='link-danger me-n5'
                   title={`Welcome, ${userInfo.name}`}
                   id='username'
                   onClick={start}

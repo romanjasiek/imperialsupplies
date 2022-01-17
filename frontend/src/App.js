@@ -19,9 +19,6 @@ import ProductListScreen from './screens/ProductListScreen';
 import ProductEditScreen from './screens/ProductEditScreen';
 import OrderListScreen from './screens/OrderListScreen';
 import TextScroller from './components/TextScroller';
-// import './loader.js';
-// import Sound from 'react-sound';
-// import BackgroundHum from './sound/tng_hum_clean.mp3';
 
 const App = () => {
   return (
@@ -32,12 +29,6 @@ const App = () => {
           Copyrighted material is used in solely within the context of the Fair Use policy.'
         />
         <Header />
-        {/* <Sound
-          url={BackgroundHum}
-          autoLoad={true}
-          loop={true}
-          playStatus={Sound.status.PLAYING}
-        /> */}
         <main className='py-3'>
           <Container>
             <Routes>

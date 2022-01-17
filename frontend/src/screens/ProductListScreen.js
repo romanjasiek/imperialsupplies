@@ -128,7 +128,7 @@ const ProductListScreen = () => {
                   <td>{product.brand}</td>
                   <td>
                     <LinkContainer to={`/admin/product/${product._id}/edit`}>
-                      <Button className='delete-button' className='btn-sm'>
+                      <Button className='delete-button btn-sm'>
                         <i className='fas fa-edit'></i>
                       </Button>
                     </LinkContainer>
