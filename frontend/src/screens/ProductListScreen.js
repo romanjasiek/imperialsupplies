@@ -5,7 +5,7 @@ import { Table, Button, Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
-import Paginate from '../components/Pagination';
+import Paginate from '../components/Paginate';
 import {
   listProducts,
   deleteProduct,
@@ -15,13 +15,16 @@ import { PRODUCT_CREATE_RESET } from '../constants/productConstants';
 
 const ProductListScreen = () => {
 
-  const { pnr } = useParams();
-  // const pageNumber = params.pageNumber || 1;
-
-  const pageNumber = parseInt(pnr, 10) || 1;
-
-
   const history = useNavigate();
+  // const pageNumber = useParams();
+
+  // const { pnr } = useParams();
+  const match = { params: useParams() };
+  const pageNumber = match.params.pageNumber || 1;
+
+  // const pageNumber = parseInt(pnr, 10) || 1;
+
+
 
   const dispatch = useDispatch();
 

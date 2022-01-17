@@ -140,7 +140,6 @@ const ProductEditScreen = () => {
               ></Form.Control>
               <Form.Control
                 type='file'
-                controlId='formFile'
                 id='image-file'
                 label='Choose File'
                 custom
@@ -189,7 +188,7 @@ const ProductEditScreen = () => {
               ></Form.Control>
             </Form.Group>
 
-            <Button type='submit' variant='primary'>
+            <Button type='submit' variant='danger'>
               Update
             </Button>
           </Form>
