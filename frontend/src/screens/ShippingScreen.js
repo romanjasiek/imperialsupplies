@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import FormContainer from '../components/FormContainer';
 import CheckoutSteps from '../components/CheckoutSteps';
 import { useDispatch, useSelector } from 'react-redux';
 import { saveShippingAddress } from '../actions/cartActions';
 import TieFighter from '../sound/d660a0dd-f51a-47e4-9077-6fcc68f17f8b.mp3';
+import TieFighter2 from '../sound/c80c41f5-824d-41ea-abea-b9245e5ee8e9.mp3';
 
 const ShippingScreen = () => {
   const history = useNavigate();
@@ -30,15 +31,24 @@ const ShippingScreen = () => {
   };
 
     let audio = new Audio(TieFighter);
+    let audio2 = new Audio(TieFighter2);
 
     const start = () => {
       audio.volume = 0.1;
       audio.play();
     };
 
+        const tieFighter = () => {
+          audio2.volume = 0.1;
+          audio2.play();
+        };
 
   return (
     <FormContainer>
+      <Link className='btn btn-dark my-3' onClick={tieFighter} to='/'>
+        <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go back{' '}
+        <span className='galacticbasic__light-darkgrey'>Go Back</span>
+      </Link>
       <CheckoutSteps step1 step2 />
       <h1>Shipping</h1>
       <h6 className='galacticbasic'>Shipping</h6>

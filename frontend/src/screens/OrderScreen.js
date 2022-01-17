@@ -54,7 +54,7 @@ const OrderScreen = () => {
 
   useEffect(() => {
     if (!userInfo) {
-      history.push('/login');
+      history('/login');
     }
 
     const addPayPalScript = async () => {
@@ -129,7 +129,7 @@ const OrderScreen = () => {
                 </a>
               </p>
               <p>
-                <strong className='categoryColor'>Address:</strong>
+                <strong className='categoryColor'>Address: </strong>
                 {order.shippingAddress.address}, {order.shippingAddress.city}{' '}
                 {order.shippingAddress.postalCode},{' '}
                 {order.shippingAddress.country}

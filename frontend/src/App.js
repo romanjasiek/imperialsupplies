@@ -58,6 +58,18 @@ const App = () => {
                 element={<ProductListScreen />}
               />
               <Route
+                path='/productlist'
+                element={<ProductListScreen />}
+              />
+              <Route
+                path='/productlist/:pageNumber'
+                element={<ProductListScreen />}
+              />
+              <Route
+                path='/productlist/page/:pageNumber'
+                element={<ProductListScreen />}
+              />
+              <Route
                 path='/admin/product/:id/edit'
                 element={<ProductEditScreen />}
               />

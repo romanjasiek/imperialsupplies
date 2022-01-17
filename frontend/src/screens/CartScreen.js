@@ -78,6 +78,11 @@ const CartScreen = () => {
           </Message>
         ) : (
           <ListGroup variant='flush'>
+            <Link className='btn btn-dark my-3' onClick={tieFighter2} to='/'>
+              <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go
+              back{' '}
+              <span className='galacticbasic__light-darkgrey'>Go Back</span>
+            </Link>
             {cartItems.map((item) => (
               <ListGroup.Item key={item.product}>
                 <Row>
