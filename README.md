@@ -2,7 +2,7 @@
 
 ## Final Project as a WebDev student at DCI Digital Career Institute gGmbH
 
-This is a final project for the course [Web Development](https://www.digitalcareerinstitute.com/courses/web-development). It covers the complete MERN Stack: MongoDB, Express, React, Node.js.
+This is a final project for the course [Web Development](https://start.digitalcareerinstitute.org/discover-dci/?utm_feeditemid=,utm_device=c,utm_term=dci%20digital%20career%20institute,utm_source=google,utm_medium=ppc,utm_campaign=,hsa_cam=13121939688,hsa_grp=126237567750,hsa_mt=e,hsa_src=g,hsa_ad=521908072780,hsa_acc=9628643656,hsa_net=adwords,hsa_kw=dci%20digital%20career%20institute,hsa_tgt=kwd-818716200405&utm_feeditemid=&utm_device=c&utm_term=dci%20digital%20career%20institute&utm_source=google&utm_medium=ppc&utm_campaign=DE_SEM_Brand_EN&utm_content=126237567750&hsa_cam=13121939688&hsa_grp=126237567750&hsa_mt=e&hsa_src=g&hsa_ad=521908072780&hsa_acc=9628643656&hsa_net=adwords&hsa_kw=dci%20digital%20career%20institute&hsa_tgt=kwd-818716200405&hsa_ver=3&gclid=EAIaIQobChMIlpaVovq79QIVSON3Ch1GfgHREAAYASAAEgL7sPD_BwE). It covers the complete MERN Stack: MongoDB, Express, React, Node.js.
 
 ### Used Software / Tools
 
@@ -14,6 +14,9 @@ This is a final project for the course [Web Development](https://www.digitalcare
 - React
 - Node.js
 - Postman
+- Slack
+- Zoom
+- Heroku
 
 ### NPM Dependencies used in the Frontend
 

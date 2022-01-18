@@ -1,5 +1,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Fonts */
+
 @font-face {
   font-family: 'DeathStar';
   src: local('DeathStar'), url(./font/DeathStar-VmWB.ttf) format('truetype');
@@ -7,81 +9,6 @@
   src: local('Moonhouse'), url(./font/Moonhouse-yE5M.ttf) format('truetype');
   font-family: 'GalacticBasic';
   src: local('GalacticBasic'), url(./font/GalacticBasic-rznB.ttf) format('truetype');
-}
-
-main {
-    min-height: 80vh;
-}
-
-h1 {
-    font-family: 'Moonhouse';
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-shadow: 0 0 5px skyblue;
-}
-
-.h1__centered {
-  text-align: center;
-}
-
-h3 {
-    padding: 1rem 0;
-}
-
-.form-control:focus {
-  border: none;
-  border: 2px solid skyblue !important;
-  box-shadow: 1 3 2px skyblue !important;
-  -moz-box-shadow: 1 3 2px skyblue !important;
-  -webkit-box-shadow: 1 3 2px skyblue !important;
-}
-
-.img-border {
-  border: 1px solid skyblue;
-  box-shadow: 0 0 15px skyblue;
-}
-
-.img-border:hover{
-  border: 1px solid skyblue;
-  box-shadow: 0 0 15px skyblue;
-    -webkit-animation: flicker 3s linear infinite;
-          animation: flicker 3s linear infinite;
-}
-
-table, thead, td, tr  {
-  border: 1px solid darkred;
-}
-
-.table-striped {
-  color: darkred;
-}
-
-.table-striped>tbody>tr:nth-of-type(odd)>* {
-  color: darkred;
-}
-
-@-webkit-keyframes flicker {
-  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-    opacity: 0.99;
-    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4), 1px -1px 0 rgba(255, 255, 255, 0.4), -1px 1px 0 rgba(255, 255, 255, 0.4), 1px 1px 0 rgba(255, 255, 255, 0.4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
-  }
-  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-    opacity: 0.4;
-    text-shadow: none;
-  }
-}
-
-@keyframes flicker {
-  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-    opacity: 0.99;
-    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4), 1px -1px 0 rgba(255, 255, 255, 0.4), -1px 1px 0 rgba(255, 255, 255, 0.4), 1px 1px 0 rgba(255, 255, 255, 0.4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
-  }
-  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-    opacity: 0.4;
-    text-shadow: none;
-  }
 }
 
 .galacticbasic {
@@ -111,6 +38,55 @@ table, thead, td, tr  {
   color: #444;
 }
 
+/* General elements */
+
+main {
+    min-height: 80vh;
+}
+
+h1 {
+    font-family: 'Moonhouse';
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px skyblue;
+}
+
+.h1__centered {
+  text-align: center;
+}
+
+h3 {
+    padding: 1rem 0;
+}
+
+h6 {
+  margin-top: -1rem;
+  padding: 0;
+  color: #444;
+}
+
+.form-control:focus {
+  border: none;
+  border: 2px solid skyblue !important;
+  box-shadow: 1 3 2px skyblue !important;
+  -moz-box-shadow: 1 3 2px skyblue !important;
+  -webkit-box-shadow: 1 3 2px skyblue !important;
+}
+
+table, thead, td, tr  {
+  border: 1px solid darkred;
+}
+
+.table-striped {
+  color: darkred;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+  color: darkred;
+}
+
 ::-webkit-input-placeholder { /* Edge */
   color: lightgrey !important;
   font-family: 'GalacticBasic';
@@ -129,10 +105,40 @@ table, thead, td, tr  {
   font-size: xx-small;
 }
 
-h6 {
-  margin-top: -1rem;
-  padding: 0;
-  color: #444;
+/* Image flickering effect */
+
+.img-border {
+  border: 1px solid skyblue;
+  box-shadow: 0 0 15px skyblue;
+}
+
+.img-border:hover{
+  border: 1px solid skyblue;
+  box-shadow: 0 0 15px skyblue;
+    -webkit-animation: flicker 3s linear infinite;
+          animation: flicker 3s linear infinite;
+}
+
+@-webkit-keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 0.99;
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4), 1px -1px 0 rgba(255, 255, 255, 0.4), -1px 1px 0 rgba(255, 255, 255, 0.4), 1px 1px 0 rgba(255, 255, 255, 0.4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 0.99;
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4), 1px -1px 0 rgba(255, 255, 255, 0.4), -1px 1px 0 rgba(255, 255, 255, 0.4), 1px 1px 0 rgba(255, 255, 255, 0.4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
 }
 
 main {
@@ -200,6 +206,8 @@ footer {
 .product-screen-background {
     background-color: #333;
 }
+
+/* Pagination */
 
 .page-item.active .page-link {
   background-color: skyblue;
