@@ -70,19 +70,9 @@ const CartScreen = () => {
         <h1>Shopping Cart</h1>
         <h6 className='galacticbasic'>Shopping Cart</h6>
         {cartItems.length === 0 ? (
-          <Message>
-            Your cart is empty.{' '}
-            <Link onClick={tieFighter2} to='/'>
-              Go Back
-            </Link>
-          </Message>
+          <Message>Your cart is empty. </Message>
         ) : (
           <ListGroup variant='flush'>
-            <Link className='btn btn-dark my-3' onClick={tieFighter2} to='/'>
-              <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go
-              back{' '}
-              <span className='galacticbasic__light-darkgrey'>Go Back</span>
-            </Link>
             {cartItems.map((item) => (
               <ListGroup.Item key={item.product}>
                 <Row>
@@ -173,6 +163,12 @@ const CartScreen = () => {
             </ListGroup.Item>
           </ListGroup>
         </Card>
+        <div className='d-grid gap-2'>
+          <Link className='btn btn-dark my-3' onClick={tieFighter2} to='/'>
+            <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go
+            back <span className='galacticbasic__light-darkgrey'>Go Back</span>
+          </Link>
+        </div>
       </Col>
     </Row>
   );

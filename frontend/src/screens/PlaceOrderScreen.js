@@ -67,7 +67,7 @@ const PlaceOrderScreen = () => {
   let audio2 = new Audio(TieFighter2);
 
   const start = () => {
-    audio.volume = 0.3;
+    audio.volume = 0.1;
     audio.play();
   };
 
@@ -79,10 +79,6 @@ const PlaceOrderScreen = () => {
   return (
     <>
       <CheckoutSteps step1 step2 step3 step4 />
-      <Link className='btn btn-dark my-3' onClick={tieFighter2} to='/'>
-        <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go back{' '}
-        <span className='galacticbasic__light-darkgrey'>Go Back</span>
-      </Link>
       <Row>
         <Col md={8}>
           <ListGroup variant='flush'>
@@ -206,6 +202,13 @@ const PlaceOrderScreen = () => {
               </ListGroup.Item>
             </ListGroup>
           </Card>
+          <div className='d-grid gap-2'>
+            <Link className='btn btn-dark my-3' onClick={tieFighter2} to='/'>
+              <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go
+              back{' '}
+              <span className='galacticbasic__light-darkgrey'>Go Back</span>
+            </Link>
+          </div>
         </Col>
       </Row>
     </>

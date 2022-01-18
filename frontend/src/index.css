@@ -22,6 +22,10 @@ h1 {
     text-shadow: 0 0 5px skyblue;
 }
 
+.h1__centered {
+  text-align: center;
+}
+
 h3 {
     padding: 1rem 0;
 }
@@ -80,15 +84,6 @@ table, thead, td, tr  {
   }
 }
 
-
-.mute-control {
-  color: #444;
-  cursor: pointer;
-}
-
-/* a {
-  font-family: 'Mandalore';
-} */
 .galacticbasic {
   font-family: 'GalacticBasic';
 }

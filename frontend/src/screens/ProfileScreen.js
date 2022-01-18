@@ -68,10 +68,6 @@ const ProfileScreen = () => {
   return (
     <Row>
       <Col md={3}>
-        <Link className='btn btn-dark my-3' onClick={tieFighter2} to='/'>
-          <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go back{' '}
-          <span className='galacticbasic__light-darkgrey'>Go Back</span>
-        </Link>
         <h2>Profile</h2>
         <h6 className='galacticbasic'>Profile</h6>
         {message && <Message variant='secondary'>{message}</Message>}
@@ -145,6 +141,13 @@ const ProfileScreen = () => {
               <span className='galacticbasic__light-darkgrey'>Update</span>
             </Button>
           </Form.Group>
+          <div className='d-grid gap-2'>
+            <Link className='btn btn-dark' onClick={tieFighter2} to='/'>
+              <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go
+              back{' '}
+              <span className='galacticbasic__light-darkgrey'>Go Back</span>
+            </Link>
+          </div>
         </Form>
       </Col>
       <Col md={9}>

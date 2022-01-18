@@ -89,10 +89,6 @@ const ProductScreen = () => {
 
   return (
     <>
-      <Link className='btn btn-dark my-3' onClick={start} to='/'>
-        <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go back{' '}
-        <span className='galacticbasic__light-darkgrey'>Go Back</span>
-      </Link>
       {loading ? (
         <Loader />
       ) : error ? (
@@ -122,8 +118,22 @@ const ProductScreen = () => {
                   {product.brand}
                 </ListGroup.Item>
                 <ListGroup.Item>
+                  <strong className='categoryColor galacticbasic'>
+                    Brand:
+                  </strong>{' '}
+                  <span className='galacticbasic__light'>{product.brand}</span>
+                </ListGroup.Item>
+                <ListGroup.Item>
                   <strong className='categoryColor'>Category:</strong>{' '}
                   {product.category}
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <strong className='categoryColor galacticbasic'>
+                    Category:
+                  </strong>{' '}
+                  <span className='galacticbasic__light'>
+                    {product.category}
+                  </span>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <strong className='categoryColor'>Price /</strong>{' '}
@@ -151,7 +161,7 @@ const ProductScreen = () => {
                   </strong>{' '}
                   <Rating
                     value={product.rating}
-                    text={`${product.numReviews} reviews`}
+                    text={`(${product.numReviews})`}
                   />
                 </ListGroup.Item>
               </ListGroup>
@@ -210,11 +220,18 @@ const ProductScreen = () => {
                   </ListGroup.Item>
                 </ListGroup>
               </Card>
+              <div className='d-grid gap-2'>
+                <Link className='btn btn-dark my-3' onClick={start} to='/'>
+                  <i className='fas fa-arrow-alt-circle-left categoryColor'></i>{' '}
+                  Go back{' '}
+                  <span className='galacticbasic__light-darkgrey'>Go Back</span>
+                </Link>
+              </div>
             </Col>
           </Row>
           <Row>
             <Col md={6}>
-              <h3>Reviews</h3>
+              <h3 className='price-color'>Reviews</h3>
               <h6 className='galacticbasic__small'>Reviews</h6>
               {product.reviews.length === 0 && (
                 <Message>
@@ -234,8 +251,8 @@ const ProductScreen = () => {
                   </ListGroup.Item>
                 ))}
                 <ListGroup.Item>
-                  <h3>Write a Customer Review</h3>
-                  <h6 className='galacticbasic__small'>
+                  <h4>Write a Customer Review</h4>
+                  <h6 className='galacticbasic__light'>
                     Write a Customer Review
                   </h6>
                   {successProductReview && (

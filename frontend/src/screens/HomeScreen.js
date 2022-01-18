@@ -8,6 +8,8 @@ import Loader from '../components/Loader';
 import { listProducts } from '../actions/productActions';
 import Paginate from '../components/Paginate';
 import ProductCarousel from '../components/ProductCarousel';
+import Meta from '../components/Meta';
+import TieFighter2 from '../sound/c80c41f5-824d-41ea-abea-b9245e5ee8e9.mp3';
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
@@ -24,18 +26,27 @@ const HomeScreen = () => {
     dispatch(listProducts(keyword, pageNumber));
   }, [dispatch, keyword, pageNumber]);
 
+  let audio = new Audio(TieFighter2);
+
+        const tieFighter2 = () => {
+          audio.volume = 0.1;
+          audio.play();
+        };
+
 
   return (
     <>
+      <Meta />
       {!keyword ? (
         <ProductCarousel />
       ) : (
-        <Link to='/' className='btn btn-light'>
-          Go Back
+        <Link className='btn btn-dark my-3' onClick={tieFighter2} to='/'>
+          <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go back{' '}
+          <span className='galacticbasic__light-darkgrey'>Go Back</span>
         </Link>
       )}
-      <h1>The Black Series</h1>
-      <h6 className='galacticbasic'>The Black Series</h6>
+      <h1 className='h1__centered'>The Black Series</h1>
+      <h6 className='h1__centered galacticbasic'>The Black Series</h6>
       {loading ? (
         <Loader />
       ) : error ? (

@@ -243,6 +243,19 @@ const OrderScreen = () => {
                       onSuccess={successPaymentHandler}
                     />
                   )}
+                  <ListGroup.Item className='d-grid gap-2'>
+                    <Link
+                      className='btn btn-dark'
+                      onClick={tieFighter2}
+                      to='/'
+                    >
+                      <i className='fas fa-arrow-alt-circle-left categoryColor'></i>{' '}
+                      Go back{' '}
+                      <span className='galacticbasic__light-darkgrey'>
+                        Go Back
+                      </span>
+                    </Link>
+                  </ListGroup.Item>
                 </ListGroup.Item>
               )}
               {loadingDeliver && <Loader />}

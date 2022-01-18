@@ -44,10 +44,6 @@ const [paymentMethod, setPaymentMethod] = useState('PayPal');
   return (
     <FormContainer>
       <CheckoutSteps step1 step2 step3 />
-      <Link className='btn btn-dark my-3' onClick={tieFighter2} to='/'>
-        <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go back{' '}
-        <span className='galacticbasic__light-darkgrey'>Go Back</span>
-      </Link>
       <h1>Payment Method</h1>
       <h6 className='galacticbasic'>Payment Method</h6>
       <Form onSubmit={submitHandler}>
@@ -90,6 +86,12 @@ const [paymentMethod, setPaymentMethod] = useState('PayPal');
             <span className='galacticbasic__light-darkgrey'>Continue</span>
           </Button>
         </Form.Group>
+        <div className='d-grid gap-2'>
+          <Link className='btn btn-dark' onClick={tieFighter2} to='/'>
+            <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go
+            back <span className='galacticbasic__light-darkgrey'>Go Back</span>
+          </Link>
+        </div>
       </Form>
     </FormContainer>
   );

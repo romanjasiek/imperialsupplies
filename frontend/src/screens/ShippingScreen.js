@@ -45,10 +45,6 @@ const ShippingScreen = () => {
 
   return (
     <FormContainer>
-      <Link className='btn btn-dark my-3' onClick={tieFighter} to='/'>
-        <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go back{' '}
-        <span className='galacticbasic__light-darkgrey'>Go Back</span>
-      </Link>
       <CheckoutSteps step1 step2 />
       <h1>Shipping</h1>
       <h6 className='galacticbasic'>Shipping</h6>
@@ -115,6 +111,12 @@ const ShippingScreen = () => {
             <span className='galacticbasic__light-darkgrey'>Continue</span>
           </Button>
         </Form.Group>
+        <div className='d-grid gap-2'>
+          <Link className='btn btn-dark' onClick={tieFighter} to='/'>
+            <i className='fas fa-arrow-alt-circle-left categoryColor'></i> Go
+            back <span className='galacticbasic__light-darkgrey'>Go Back</span>
+          </Link>
+        </div>
       </Form>
     </FormContainer>
   );
