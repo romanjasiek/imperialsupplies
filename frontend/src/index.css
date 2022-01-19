@@ -2,7 +2,7 @@
 
 /* Fonts */
 
-@font-face {
+/* @font-face {
   font-family: 'DeathStar';
   src: local('DeathStar'), url(./font/DeathStar-VmWB.ttf) format('truetype');
   font-family: 'Moonhouse';
@@ -36,7 +36,7 @@
   font-family: 'GalacticBasic';
   font-size: xx-small;
   color: #444;
-}
+} */
 
 /* General elements */
 
