@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: 'DeathStar';
-  src: local('DeathStar'), url(./font/deathstar.otf) format('opentype');
+  src: url(./font/deathstar.otf) format('opentype');
   font-family: 'Moonhouse';
-  src: local('Moonhouse'), url(./font/Moonhouse-yE5M.ttf) format('truetype');
+  src: url(./font/Moonhouse-yE5M.ttf) format('truetype');
   font-family: 'GalacticBasic';
-  src: local('GalacticBasic'), url(./font/GalacticBasic-rznB.ttf) format('truetype');
+  src: url(./font/GalacticBasic-rznB.ttf) format('truetype');
 }
 
 .galacticbasic {
