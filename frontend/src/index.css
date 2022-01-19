@@ -3,7 +3,7 @@
 /* Fonts */
 
 @font-face {
-  font-family: 'DeathStar';
+  font-family: 'Death Star';
   src: url(./font/deathstar.otf) format('opentype');
   font-family: 'Moonhouse';
   src: url(./font/Moonhouse-yE5M.ttf) format('truetype');
@@ -167,7 +167,7 @@ footer {
 }
 
 .title {
-    font-family: 'DeathStar';
+    font-family: 'Death Star';
     font-size: 4.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
