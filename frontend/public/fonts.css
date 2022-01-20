@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'DeathStar';
-  src: url(./fonts/deathstar.otf) format('opentype');
+  src: url(deathstar.otf) format('opentype');
   font-family: 'Moonhouse';
-  src: url(./fonts/Moonhouse-yE5M.ttf) format('truetype');
+  src: url(Moonhouse-yE5M.ttf) format('truetype');
   font-family: 'GalacticBasic';
-  src: url(./fonts/GalacticBasic-rznB.ttf) format('truetype');
+  src: url(GalacticBasic-rznB.ttf) format('truetype');
 }
 
 .galacticbasic {

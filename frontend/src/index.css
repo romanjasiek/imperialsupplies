@@ -32,14 +32,14 @@
 
 /* Fonts */
 
-@font-face {
+/* @font-face {
   font-family: 'Death Star';
   src: url(./font/DeathStar.woff) format('woff');
   font-family: 'Moonhouse';
   src: url(./font/Moonhouse-yE5M.ttf) format('truetype');
   font-family: 'GalacticBasic';
   src: url(./font/GalacticBasic-rznB.ttf) format('truetype');
-}
+} */
 
 .galacticbasic {
   font-family: 'GalacticBasic';
