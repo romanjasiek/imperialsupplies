@@ -85,6 +85,8 @@ Simultaneously with this project, for which I had only a few days / weeks (maxim
 - [ ] Expand shipment functionality (maybe track order)
 - [ ] Add wishlist
 - [ ] Add preorders
+- [ ] Add shipping costs
+- [ ] Link count in stock to orders
 - [ ] Additional Product Categories
 - [ ] Handle returns / Customer support
 - [ ] Make the Droid on the bottom interactive (maybe chat with customer support)
