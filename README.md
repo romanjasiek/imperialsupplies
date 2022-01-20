@@ -65,7 +65,7 @@ All copyrighted material is the property of its respective owners. I do not clai
 
 Simultaneously with this project, for which I had only a few days / weeks (maximum 6 weeks), the list of features that can be implemented in future versions grew.
 
-- [ ] Change image hosting to Cloudinary or similar
+- [x] ~~Change image hosting to Cloudinary or similar~~
 - [ ] Fix missing fonts / images in Safari
 - [ ] Implement CORS
 - [ ] Clean up / comment code
