@@ -4,7 +4,8 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { logout } from '../actions/userActions';
 import SearchBox from '../components/SearchBox';
-import Binoculars from '../components/Binoculars';
+// import Binoculars from '../components/Binoculars';
+import DeathStar from './DeathStar';
 import TieFighter2 from '../sound/c80c41f5-824d-41ea-abea-b9245e5ee8e9.mp3';
 import ImperialMarch from '../sound/imperial-march-ringtone.mp3';
 
@@ -34,7 +35,7 @@ const Header = () => {
 
   return (
     <header>
-      <Binoculars />
+      <DeathStar />
       <Navbar
         bg='dark'
         variant='dark'

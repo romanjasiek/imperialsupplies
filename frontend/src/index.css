@@ -1,5 +1,35 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+.paralax-container {
+  background: url(https://wallpapercave.com/wp/wp2902991.jpg) fixed;
+  width: 100%;
+  height: 75vh;
+
+}
+
+.paralax {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+#tie {
+  background: url(http://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/256/Tie-Advanced-icon.png) no-repeat 400px 200px;
+}
+
+#deathstar {
+  background: url(http://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/256/Death-Star-2nd-icon.png) no-repeat 500px 50px;
+  
+
+}
+
+
+/* @-moz-document url-prefix() {
+  .star-wars-binoculars {
+    display: none;
+  }
+}   */
+
 /* Fonts */
 
 @font-face {
@@ -144,6 +174,7 @@ table, thead, td, tr  {
 main {
   background-image: url(./img/texture2.jpg);
   background-size: cover;
+  z-index: 100;
 }
 
 .navbar {
@@ -247,6 +278,7 @@ footer {
 }
 
 /* Carousel */
+
 
 .carousel-item-next,
 .carousel-item-prev,
