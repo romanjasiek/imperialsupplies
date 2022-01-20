@@ -34,7 +34,7 @@
 
 @font-face {
   font-family: 'Death Star';
-  src: url(deathstar.otf) format('opentype');
+  src: url(./font/DeathStar.woff) format('woff');
   font-family: 'Moonhouse';
   src: url(./font/Moonhouse-yE5M.ttf) format('truetype');
   font-family: 'GalacticBasic';
