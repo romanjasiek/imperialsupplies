@@ -198,7 +198,7 @@ footer {
 }
 
 .title {
-    font-family: 'Death Star';
+    font-family: 'Death Star' !important;
     font-size: 4.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
