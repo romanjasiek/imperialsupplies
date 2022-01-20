@@ -1,8 +1,14 @@
 @font-face {
   font-family: 'DeathStar';
   src: url(deathstar.otf) format('opentype');
+}
+
+@font-face {
   font-family: 'Moonhouse';
   src: url(Moonhouse-yE5M.ttf) format('truetype');
+}
+
+@font-face {
   font-family: 'GalacticBasic';
   src: url(GalacticBasic-rznB.ttf) format('truetype');
 }
