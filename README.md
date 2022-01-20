@@ -66,9 +66,9 @@ All copyrighted material is the property of its respective owners. I do not clai
 Simultaneously with this project, for which I had only a few days / weeks (maximum 6 weeks), the list of features that can be implemented in future versions grew.
 
 - [x] ~~Change image hosting to Cloudinary or similar~~
-- [ ] Fix missing fonts / images in Safari
+- [x] ~~Fix missing fonts / images in Safari~~
 - [ ] Implement CORS
-- [ ] Clean up / comment code
+- [x] ~~Clean up~~ / comment code
 - [ ] Refactor CSS (maybe Sass)
 - [ ] Validate  Mailadress
 - [ ] (Mail) Notifications about status changes
