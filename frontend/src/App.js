@@ -18,16 +18,11 @@ import UserEditScreen from './screens/UserEditScreen';
 import ProductListScreen from './screens/ProductListScreen';
 import ProductEditScreen from './screens/ProductEditScreen';
 import OrderListScreen from './screens/OrderListScreen';
-import TextScroller from './components/TextScroller';
 
 const App = () => {
   return (
     <Router>
       <Fragment>
-        <TextScroller
-          text='Please note: This is NOT a real shop. No orders will be processed! Every entered data will be wiped out frequently.
-          Copyrighted material is used in solely within the context of the Fair Use policy.'
-        />
         <Header />
         <main className='py-3'>
           <Container>
