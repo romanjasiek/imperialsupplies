@@ -17,7 +17,7 @@ html, body { min-height: 100vh;
   }
 
   .title {
-    display: none;
+    font-size: 0.5rem;
 }
 
   h1 {
@@ -31,6 +31,7 @@ html, body { min-height: 100vh;
   background: url(./img/space.jpg) fixed;
   width: 100%;
   height: 75vh;
+  z-index: -10;
 }
 
 .paralax {
