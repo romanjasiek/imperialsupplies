@@ -17,6 +17,7 @@ import {
   listProductDetails,
   createProductReview,
 } from '../actions/productActions';
+import { addToCart } from '../actions/cartActions';
 import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants';
 import TieFighter2 from '../sound/c80c41f5-824d-41ea-abea-b9245e5ee8e9.mp3';
 import ThisIsTheWay from '../sound/cac7f9ab-f6a9-44b3-a37c-abe78d1dbd87.mp3';
@@ -55,8 +56,13 @@ const ProductScreen = () => {
     }
   }, [dispatch, successProductReview, id, product._id]);
 
+  // const addToCartHandler = () => {
+  //   history(`/cart/${id}?qty=${qty}`);
+  // };
+
   const addToCartHandler = () => {
-    history(`/cart/${id}?qty=${qty}`);
+    dispatch(addToCart(product._id, qty));
+    history('/cart');
   };
 
   const submitHandler = (e) => {

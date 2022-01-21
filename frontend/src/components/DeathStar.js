@@ -6,7 +6,7 @@ const DeathStar = () => {
       var tie = document.getElementById('tie');
       var deathstar = document.getElementById('deathstar');
 
-      tie.style.top = window.pageYOffset / 1 + 'px';
+      tie.style.top = window.pageYOffset / 0.5 + 'px';
       tie.style.left = -(window.pageYOffset / 0.25) + 'px';
       deathstar.style.top = -(window.pageYOffset / 3) + 'px';
       deathstar.style.right = -window.pageYOffset + 'px';
