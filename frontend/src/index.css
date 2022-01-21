@@ -17,10 +17,7 @@ html, body { min-height: 100vh;
   }
 
   .title {
-    font-size: 2rem !important;
-    margin: 0;
-    text-shadow: 0 0 5px red;
-
+    display: none;
 }
 
   h1 {
@@ -54,6 +51,7 @@ html, body { min-height: 100vh;
 
 main {
     min-height: 80vh;
+    z-index: 9999;
 }
 
 h1 {

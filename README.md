@@ -58,6 +58,7 @@ This is a final project for the course [Web Development](https://start.digitalca
 - https://mixkit.co/free-sound-effects/hum/?page=2
 - https://www.pinterest.de/pin/393361348691050049/
 - https://www.artstation.com/artwork/1De53
+- https://wallpapersafari.com/black-star-wars-space-backgrounds/
 
 All copyrighted material is the property of its respective owners. I do not claim it in any way. All copyrighted material is used in the context of this final project in accordance with the Fair Use Policy.
 
