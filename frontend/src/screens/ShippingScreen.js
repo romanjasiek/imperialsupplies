@@ -59,6 +59,7 @@ const ShippingScreen = () => {
             placeholder='Enter your address'
             value={address}
             required
+            autoFocus
             onChange={(e) => setAddress(e.target.value)}
           />
         </Form.Group>
