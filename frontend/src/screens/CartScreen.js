@@ -21,9 +21,9 @@ const CartScreen = () => {
   const { search } = useLocation();
   const history = useNavigate();
 
-  const productId = id;
+  // const productId = id;
 
-  const qty = search ? Number(search.split('=')[1]) : 1;
+  // const qty = search ? Number(search.split('=')[1]) : 1;
   // const qty = location.search ? Number(location.search.split('=')[1]) : 1;
 
   const dispatch = useDispatch();
@@ -31,11 +31,11 @@ const CartScreen = () => {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
-  useEffect(() => {
-    if (productId) {
-      dispatch(addToCart(productId, qty));
-    }
-  }, [dispatch, productId, qty]);
+  // useEffect(() => {
+  //   if (productId) {
+  //     dispatch(addToCart(productId, qty));
+  //   }
+  // }, [dispatch, productId, qty]);
 
   const removeFromCartHandler = (id) => {
     dispatch(removeFromCart(id));
