@@ -25,6 +25,13 @@ html, body { min-height: 100vh;
   }
 }
 
+/* Caret */
+
+input[type=text], input[type=password], input[type=email] {
+  caret-color: red;
+}
+
+
 /* Paralax Header */
 
 .paralax-container {

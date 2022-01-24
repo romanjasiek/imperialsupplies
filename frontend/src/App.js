@@ -52,10 +52,7 @@ const App = () => {
                 path='/admin/productlist/page/:pageNumber'
                 element={<ProductListScreen />}
               />
-              <Route
-                path='/productlist'
-                element={<ProductListScreen />}
-              />
+              <Route path='/productlist' element={<ProductListScreen />} />
               <Route
                 path='/productlist/:pageNumber'
                 element={<ProductListScreen />}
